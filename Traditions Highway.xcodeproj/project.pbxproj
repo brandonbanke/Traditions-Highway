@@ -13,6 +13,7 @@
 		49B6F84D26E7F8C40071441A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F84C26E7F8C40071441A /* Assets.xcassets */; };
 		49B6F85026E7F8C40071441A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F84F26E7F8C40071441A /* Preview Assets.xcassets */; };
 		49B6F85326E7F8C40071441A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F85126E7F8C40071441A /* LaunchScreen.storyboard */; };
+		49B6F85D26E800890071441A /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F85C26E800890071441A /* Landmarks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		49B6F84F26E7F8C40071441A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49B6F85226E7F8C40071441A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B6F85426E7F8C40071441A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B6F85C26E800890071441A /* Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				49B6F85126E7F8C40071441A /* LaunchScreen.storyboard */,
 				49B6F85426E7F8C40071441A /* Info.plist */,
 				49B6F84E26E7F8C40071441A /* Preview Content */,
+				49B6F85C26E800890071441A /* Landmarks.swift */,
 			);
 			path = "Traditions Highway";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				49B6F84726E7F8C10071441A /* AppDelegate.swift in Sources */,
 				49B6F84926E7F8C10071441A /* SceneDelegate.swift in Sources */,
 				49B6F84B26E7F8C10071441A /* ContentView.swift in Sources */,
+				49B6F85D26E800890071441A /* Landmarks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
