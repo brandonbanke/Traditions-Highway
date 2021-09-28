@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49695F2C26F0F2640023DF5C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49695F2B26F0F2640023DF5C /* LocationViewModel.swift */; };
+		49695F2E26F0F48B0023DF5C /* StructViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49695F2D26F0F48B0023DF5C /* StructViews.swift */; };
+		499B17E5270234D600ED8E3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B17E4270234D600ED8E3C /* MapView.swift */; };
+		499B17E8270236C200ED8E3C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B17E7270236C200ED8E3C /* LocationManager.swift */; };
 		49B6F84726E7F8C10071441A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F84626E7F8C10071441A /* AppDelegate.swift */; };
 		49B6F84926E7F8C10071441A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F84826E7F8C10071441A /* SceneDelegate.swift */; };
 		49B6F84B26E7F8C10071441A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F84A26E7F8C10071441A /* ContentView.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49695F2B26F0F2640023DF5C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		49695F2D26F0F48B0023DF5C /* StructViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructViews.swift; sourceTree = "<group>"; };
+		499B17E4270234D600ED8E3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		499B17E7270236C200ED8E3C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		49B6F84326E7F8C10071441A /* Traditions Highway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Traditions Highway.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B6F84626E7F8C10071441A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B6F84826E7F8C10071441A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499B17E3270234BF00ED8E3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				499B17E4270234D600ED8E3C /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		499B17E6270236B200ED8E3C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				499B17E7270236C200ED8E3C /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		49B6F83A26E7F8C10071441A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +82,8 @@
 		49B6F84526E7F8C10071441A /* Traditions Highway */ = {
 			isa = PBXGroup;
 			children = (
+				499B17E6270236B200ED8E3C /* Managers */,
+				499B17E3270234BF00ED8E3C /* Views */,
 				49B6F84626E7F8C10071441A /* AppDelegate.swift */,
 				49B6F84826E7F8C10071441A /* SceneDelegate.swift */,
 				49B6F84A26E7F8C10071441A /* ContentView.swift */,
@@ -66,6 +92,8 @@
 				49B6F85426E7F8C40071441A /* Info.plist */,
 				49B6F84E26E7F8C40071441A /* Preview Content */,
 				49B6F85C26E800890071441A /* Landmarks.swift */,
+				49695F2B26F0F2640023DF5C /* LocationViewModel.swift */,
+				49695F2D26F0F48B0023DF5C /* StructViews.swift */,
 			);
 			path = "Traditions Highway";
 			sourceTree = "<group>";
@@ -148,10 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				499B17E5270234D600ED8E3C /* MapView.swift in Sources */,
 				49B6F84726E7F8C10071441A /* AppDelegate.swift in Sources */,
 				49B6F84926E7F8C10071441A /* SceneDelegate.swift in Sources */,
 				49B6F84B26E7F8C10071441A /* ContentView.swift in Sources */,
+				499B17E8270236C200ED8E3C /* LocationManager.swift in Sources */,
+				49695F2C26F0F2640023DF5C /* LocationViewModel.swift in Sources */,
 				49B6F85D26E800890071441A /* Landmarks.swift in Sources */,
+				49695F2E26F0F48B0023DF5C /* StructViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,19 +12,33 @@ import UserNotifications
 import CoreLocation
 
 struct ContentView: View {
+    @State private var search: String = ""
+    @ObservedObject var locationManager = LocationManager()
+    //@StateObject var locationViewModel = LocationViewModel()
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.700264, longitude: -82.659646) , span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3))
+
     var body: some View {
         VStack {
             NavigationView {
                 VStack {
-                    Map(coordinateRegion: $region)
-                        .edgesIgnoringSafeArea(.all)
-                        .overlay(
-                            Image("Logo")
-                                .resizable()
-                                .frame(width: 70.0, height: 70.0)
-                                .position(x: 160, y: -60)
-                        )
+                    ZStack() {
+                        
+                        //Map(coordinateRegion: $region)
+                        MapView()
+                            .edgesIgnoringSafeArea(.all)
+                            .overlay(
+                                Image("Logo")
+                                    .resizable()
+                                    .frame(width: 70.0, height: 70.0)
+                                    .position(x: 160, y: -60)
+                            )
+                        TextField("Search", text: $search, onEditingChanged: {_ in}) {
+                            //commit
+                        }
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .position(x: 160, y:285)
+                    }
+
                     Spacer()
                     HStack {
                         NavigationLink(destination: Landmarks()) {
@@ -42,20 +56,17 @@ struct ContentView: View {
                     } // HStack
                     Spacer()
                     Spacer()
-                    Button("Schedule Notification") {
-                        let content = UNMutableNotificationContent()
-                        content.title = "You are near Jounrnalism!"
-                        content.subtitle = "We have NMIX here"
-                        content.sound = UNNotificationSound.default
-                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-                        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                        UNUserNotificationCenter.current().add(request)
+                    HStack {
+                        Button("Schedule Notification") {
+                            scheduleNotification()
+                        }
                     }
                     .toolbar {
                         ToolbarMenu()
                     } // Toolbar
                     .onAppear(perform: {
                         requestNotification()
+                        //locationViewModel.requestPermission()
                     })
                 } // VStack
             } // NavigationView
@@ -69,57 +80,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct ToolbarMenu: ToolbarContent {
-
-    var body: some ToolbarContent {
-        ToolbarItemGroup(placement: .bottomBar) {
-            Spacer()
-            
-            Button(action: {
-                print("Edit button was tapped")
-            }, label: {
-                Image(systemName: "magnifyingglass")
-            })
-         
-            Spacer()
-            
-            Button(action: {
-                print("Edit button was tapped")
-            }) {
-                Image(systemName: "house")
-            }
-
-        
-            Spacer()
-            
-            Button(action: {
-                print("Edit button was tapped")
-            }, label: {
-                Image(systemName: "star")
-            })
-            
-            Spacer()
-        }
-
-    }
-}
-
-struct navButton: View {
-    var imageName: String
-    var color: Color
-    
-    var body: some View {
-        Rectangle()
-            .frame(width: 60, height: 60)
-            .foregroundColor(color)
-            .cornerRadius(5.0)
-            .overlay(
-            Image(systemName: imageName)
-                .foregroundColor(.white)
-            )
-    }
-}
-
 func requestNotification() {
     UNUserNotificationCenter.current()
         .requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
@@ -129,4 +89,14 @@ func requestNotification() {
                 print(error.localizedDescription)
             }
         }
+}
+
+func scheduleNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "You are near Journalism!"
+    content.subtitle = "We have NMIX here"
+    content.sound = UNNotificationSound.default
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    UNUserNotificationCenter.current().add(request)
 }
