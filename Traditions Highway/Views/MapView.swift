@@ -18,22 +18,26 @@ class Coordinator: NSObject, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        
         if let annotationView = views.first {
             if let annotation = annotationView.annotation {
                 if annotation is MKUserLocation {
-                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000000, longitudinalMeters: 1000000)
+                    
+                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
                     mapView.setRegion(region, animated: true)
-                    print(region.center.longitude)
-                    print(region.center.latitude)
+                    
                 }
             }
         }
+        
     }
     
 }
 
 
 struct MapView: UIViewRepresentable {
+    
+    let landmarks: [Landmark]
     
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView()
@@ -47,7 +51,23 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
-        //
+        updateAnnotations(from: uiView)
+    }
+    
+    private func updateAnnotations(from mapView: MKMapView) {
+        //mapView.removeAnnotations(mapView.annotations)
+        let annotations = self.landmarks.map(LandmarkAnnotation.init)
+        mapView.addAnnotations(annotations)
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager, from mapView: MKMapView) {
+      // 1
+      let status = manager.authorizationStatus
+
+      // 2
+      mapView.showsUserLocation = (status == .authorizedAlways)
+
+      
     }
     
 }

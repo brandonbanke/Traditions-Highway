@@ -12,91 +12,63 @@ import UserNotifications
 import CoreLocation
 
 struct ContentView: View {
-    @State private var search: String = ""
-    @ObservedObject var locationManager = LocationManager()
-    //@StateObject var locationViewModel = LocationViewModel()
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.700264, longitude: -82.659646) , span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3))
-
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.init(named: "NavBar")
+        }
     var body: some View {
-        VStack {
-            NavigationView {
-                VStack {
-                    ZStack() {
-                        
-                        //Map(coordinateRegion: $region)
-                        MapView()
-                            .edgesIgnoringSafeArea(.all)
-                            .overlay(
-                                Image("Logo")
-                                    .resizable()
-                                    .frame(width: 70.0, height: 70.0)
-                                    .position(x: 160, y: -60)
-                            )
-                        TextField("Search", text: $search, onEditingChanged: {_ in}) {
-                            //commit
-                        }
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .position(x: 160, y:285)
-                    }
-
-                    Spacer()
-                    HStack {
-                        NavigationLink(destination: Landmarks()) {
-                            navButton(imageName: "mappin.and.ellipse", color: .green)
-                        }
-                        NavigationLink(destination: Landmarks()) {
-                            navButton(imageName: "f.circle", color: .red)
-                        }
-                        NavigationLink(destination: Landmarks()) {
-                            navButton(imageName: "paintbrush", color: .purple)
-                        }
-                        NavigationLink(destination: Landmarks()) {
-                            navButton(imageName: "tag", color: .blue)
-                        }
-                    } // HStack
-                    Spacer()
-                    Spacer()
-                    HStack {
-                        Button("Schedule Notification") {
-                            scheduleNotification()
-                        }
-                    }
-                    .toolbar {
-                        ToolbarMenu()
-                    } // Toolbar
-                    .onAppear(perform: {
-                        requestNotification()
-                        //locationViewModel.requestPermission()
-                    })
-                } // VStack
-            } // NavigationView
-        } // VStack
+        TabView {
+            HomeView()
+                .tabItem {
+                    barImage(color: .white, sfImage: "house")
+                }
+            MapScreen()
+                .tabItem {
+                    barImage(color: .white, sfImage: "mappin.and.ellipse")
+                }
+            FavoritesView()
+                .tabItem {
+                    barImage(color: .white, sfImage: "star")
+                }
+            SearchView()
+                .tabItem {
+                    barImage(color: .white, sfImage: "magnifyingglass")
+                }
+        }
     } // Body
 } // Struct
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
-func requestNotification() {
-    UNUserNotificationCenter.current()
-        .requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
-            if success {
-                print("all set")
-            } else if let error = error {
-                print(error.localizedDescription)
-            }
-        }
+struct barImage: View {
+    var color: Color
+    var sfImage: String
+    
+    var body: some View {
+        Image(systemName: sfImage)
+            .foregroundColor(color)
+    }
 }
 
-func scheduleNotification() {
-    let content = UNMutableNotificationContent()
-    content.title = "You are near Journalism!"
-    content.subtitle = "We have NMIX here"
-    content.sound = UNNotificationSound.default
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-    UNUserNotificationCenter.current().add(request)
+extension UITabBarController {
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let standardAppearance = UITabBarAppearance()
+        
+        standardAppearance.stackedLayoutAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.red]
+        standardAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.red]
+        standardAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.red]
+        
+        standardAppearance.inlineLayoutAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.green]
+        standardAppearance.inlineLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.green]
+        standardAppearance.inlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.green]
+        
+        standardAppearance.compactInlineLayoutAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.blue]
+        standardAppearance.compactInlineLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.blue]
+        standardAppearance.compactInlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.blue]
+        
+        tabBar.standardAppearance = standardAppearance
+    }
 }
