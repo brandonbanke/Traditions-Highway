@@ -16,6 +16,7 @@ struct HomeView: View {
     @State private var landmarks: [Landmark] = [Landmark]()
     @State private var search: String = ""
     @State private var tapped: Bool = false
+    @State var selectedRoute: Route?
     private func getNearByLandmarks() {
             
             let request = MKLocalSearch.Request()
@@ -62,18 +63,18 @@ struct HomeView: View {
                         }
                         Spacer()
                         ScrollView {
-                            VStack(spacing: 20) {
-                                NavigationLink(destination: MapScreen()) {
-                                    CardView(image: "Cup", title: "YUMM", subTitle: "Food", description: "Looking for some yummy, unique restaurants to hit the spot? Look no further.")
+                        ForEach(routes) { route in
+                            CardView(route: route)
+                                .onTapGesture {
+                                    self.selectedRoute = route
                                 }
-                                NavigationLink(destination: HomeView()) {
-                                    CardView(image: "Cup", title: "YUMMM", subTitle: "Food", description: "Looking for some yummy, unique restaurants to hit the spot? Look no further.")
-                                }
-                                NavigationLink(destination: HomeView()) {
-                                    CardView(image: "Cup", title: "YUMMM", subTitle: "Food", description: "Looking for some yummy, unique restaurants to hit the spot? Look no further.")
-                                }
-                            } // VStack
-                        } // HStack
+                            Spacer()
+                        }
+                        .listRowBackground(Color("BackgroundColor"))
+                        .sheet(item: self.$selectedRoute) { route in
+                            RouteInfoView(route: route)
+                        }
+                        }
                         Spacer()
                         Spacer()
                         .onAppear(perform: {

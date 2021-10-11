@@ -87,29 +87,23 @@ struct CardModifier: ViewModifier {
 
 struct CardView: View {
     
-    var image: String
-    var title: String
-    var subTitle: String
-    var description: String
+    var route: Route
     
     var body: some View {
         RoundedRectangle(cornerRadius: 25, style: .continuous).overlay(
         HStack(alignment: .center) {
-            Image(image)
+            Image(route.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 110)
+                .frame(width: 140)
                 .padding(.all, 20)
             
             VStack(alignment: .leading) {
-                Text(title)
+                Text(route.title)
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.black)
-                Text(subTitle)
-                    .font(.system(size: 8, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
                 HStack {
-                    Text(description)
+                    Text(route.summary)
                         .font(.system(size: 10, weight: .bold, design: .default))
                         .foregroundColor(.black )
                         .padding(.top, 8)
@@ -118,13 +112,13 @@ struct CardView: View {
             }.padding(.trailing, 20)
             Spacer()
         }
-            .frame(width: 305, height: 165, alignment: .center)
+            .frame(width: 335, height: 165, alignment: .center)
         .background(Color.white)
         .modifier(CardModifier())
         .padding(.all, 10)
         )
         .foregroundColor(.black)
-        .frame(width: 310, height: 170, alignment: .center)
+        .frame(width: 340, height: 170, alignment: .center)
         .shadow(color: .gray, radius: 2, x: 0, y: 2)
     }
 }
