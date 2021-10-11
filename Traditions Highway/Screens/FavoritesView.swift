@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @State var selectedPOI: PointOfInterest?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color("BackgroundColor").ignoresSafeArea()
+            VStack {
+                Text("FAVORITES").font(.system(size: 30, weight: .bold, design: .default))
+                ScrollView {
+                    ForEach(pointsOfInterest) { pointOfInterest in
+                        CardViewPOI(pointOfInterest: pointOfInterest)
+                            .onTapGesture {
+                                self.selectedPOI = pointOfInterest
+                            }
+                        Spacer()
+                    }
+                    .listRowBackground(Color("BackgroundColor"))
+                    .sheet(item: self.$selectedPOI) { pointOfInterest in
+                        PointOfInterestInfoView(pointOfInterest: pointOfInterest)
+                    }
+                }
+            }
+        }
     }
 }
 

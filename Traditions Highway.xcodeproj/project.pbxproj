@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492A87EC27146D11000CDDA3 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A87EB27146D11000CDDA3 /* PointOfInterest.swift */; };
+		492A87EE271470B7000CDDA3 /* PointOfInterestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */; };
 		49695F2E26F0F48B0023DF5C /* StructViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49695F2D26F0F48B0023DF5C /* StructViews.swift */; };
 		499AE40B270A122100B04016 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AE40A270A122100B04016 /* LandmarkList.swift */; };
 		499B17E5270234D600ED8E3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B17E4270234D600ED8E3C /* MapView.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		492A87EB27146D11000CDDA3 /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
+		492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestInfoView.swift; sourceTree = "<group>"; };
 		49695F2D26F0F48B0023DF5C /* StructViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructViews.swift; sourceTree = "<group>"; };
 		499AE40A270A122100B04016 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		499B17E4270234D600ED8E3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				499B17E4270234D600ED8E3C /* MapView.swift */,
 				499B17F02703B88000ED8E3C /* PlaceListView.swift */,
 				49F148312713F2C800DF9E8E /* RouteInfoView.swift */,
+				492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 				499B17EC2703B29400ED8E3C /* LandmarkAnnotation.swift */,
 				499AE40A270A122100B04016 /* LandmarkList.swift */,
 				49F148332713F59B00DF9E8E /* Route.swift */,
+				492A87EB27146D11000CDDA3 /* PointOfInterest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 				49B6F84726E7F8C10071441A /* AppDelegate.swift in Sources */,
 				499B17ED2703B29400ED8E3C /* LandmarkAnnotation.swift in Sources */,
 				499AE40B270A122100B04016 /* LandmarkList.swift in Sources */,
+				492A87EE271470B7000CDDA3 /* PointOfInterestInfoView.swift in Sources */,
+				492A87EC27146D11000CDDA3 /* PointOfInterest.swift in Sources */,
 				49D1E60727134DD1008D42E6 /* FavoritesView.swift in Sources */,
 				49F148342713F59B00DF9E8E /* Route.swift in Sources */,
 				49F148322713F2C800DF9E8E /* RouteInfoView.swift in Sources */,

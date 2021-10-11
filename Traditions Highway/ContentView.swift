@@ -29,7 +29,7 @@ struct ContentView: View {
                 .tabItem {
                     barImage(color: .white, sfImage: "star")
                 }
-            SearchView()
+            SearchView(searchResults: pointsOfInterest)
                 .tabItem {
                     barImage(color: .white, sfImage: "magnifyingglass")
                 }

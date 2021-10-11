@@ -123,6 +123,44 @@ struct CardView: View {
     }
 }
 
+struct CardViewPOI: View {
+    
+    var pointOfInterest: PointOfInterest
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 25, style: .continuous).overlay(
+        HStack(alignment: .center) {
+            Image(pointOfInterest.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 140)
+                .padding(.all, 20)
+            
+            VStack(alignment: .leading) {
+                Text(pointOfInterest.title)
+                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .foregroundColor(.black)
+                HStack {
+                    Text(pointOfInterest.summary)
+                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .foregroundColor(.black )
+                        .padding(.top, 8)
+                        .multilineTextAlignment(.leading)
+                }
+            }.padding(.trailing, 20)
+            Spacer()
+        }
+            .frame(width: 335, height: 165, alignment: .center)
+        .background(Color.white)
+        .modifier(CardModifier())
+        .padding(.all, 10)
+        )
+        .foregroundColor(.black)
+        .frame(width: 340, height: 170, alignment: .center)
+        .shadow(color: .gray, radius: 2, x: 0, y: 2)
+    }
+}
+
 extension View {
      public func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {
          let roundedRect = RoundedRectangle(cornerRadius: cornerRadius)
