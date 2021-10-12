@@ -16,7 +16,7 @@ struct SearchView: View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
             VStack {
-                Text("FAVORITES").font(.system(size: 30, weight: .bold, design: .default))
+                Text("SEARCH").font(.system(size: 30, weight: .bold, design: .default))
                 TextField("Search ...", text: $searchText)
                     .padding(7)
                     .padding(.horizontal, 25)

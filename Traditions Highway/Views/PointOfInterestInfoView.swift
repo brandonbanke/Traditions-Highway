@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PointOfInterestInfoView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -20,11 +21,21 @@ struct PointOfInterestInfoView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     
-                Group {
+                HStack {
                     Text(pointOfInterest.title)
                         .font(.system(.title, design: .rounded))
                         .fontWeight(.black)
                         .lineLimit(3)
+                    Spacer()
+                    Button {
+                        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: pointOfInterest.coordinates))
+                        mapItem.name = pointOfInterest.title
+                        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+                    } label: {
+                        Image(systemName: "map")
+                            .multilineTextAlignment(.trailing)
+                            .font(.system(size: 40))
+                    }
                 }
                 .padding(.bottom, 0)
                 .padding(.horizontal)
