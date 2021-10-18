@@ -44,7 +44,6 @@ struct PlaceList: View {
     
     var body: some View {
         List {
-            
             ForEach(self.landmarks, id: \.id) { landmark in
                 HStack {
                     VStack(alignment: .leading) {
@@ -69,11 +68,12 @@ struct PlaceList: View {
                             .multilineTextAlignment(.trailing)
                     }
                     
-                }
-            }
+                } // HStack
+            } // ForEach
             
         }.id(UUID())
         .animation(nil)
         .cornerRadius(10)
-    }
-}
+        // List
+    } // Body
+} // Struct

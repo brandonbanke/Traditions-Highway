@@ -34,9 +34,9 @@ struct RouteInfoView: View {
                     .padding()
                     .lineLimit(1000)
                     .multilineTextAlignment(.leading)
-            }
+            } // VStack
             
-        }
+        } // ScrollView
         .overlay(
             
             HStack {
@@ -54,14 +54,14 @@ struct RouteInfoView: View {
                     .padding(.top, 40)
                     
                     Spacer()
-                }
-            }
+                } // VStack
+            } // HStack
         )
         
         .edgesIgnoringSafeArea(.top)
         
-    }
-}
+    } // Body
+} // Struct
 
 struct RouteInfoView_Previews: PreviewProvider {
     static var previews: some View {
