@@ -25,7 +25,7 @@ struct ContentView: View {
                 .tabItem {
                     barImage(color: .white, sfImage: "mappin.and.ellipse")
                 }
-            FavoritesView()
+            FavoritesView(searchResults: pointsOfInterest)
                 .tabItem {
                     barImage(color: .white, sfImage: "star")
                 }

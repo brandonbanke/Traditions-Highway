@@ -12,7 +12,7 @@ struct PointOfInterestInfoView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showAlert = false
     
-    var pointOfInterest: PointOfInterest
+    @State var pointOfInterest: PointOfInterest
     
     var body: some View {
         ScrollView {
@@ -27,14 +27,33 @@ struct PointOfInterestInfoView: View {
                         .fontWeight(.black)
                         .lineLimit(3)
                     Spacer()
-                    Button {
-                        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: pointOfInterest.coordinates))
-                        mapItem.name = pointOfInterest.title
-                        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
-                    } label: {
-                        Image(systemName: "map")
-                            .multilineTextAlignment(.trailing)
-                            .font(.system(size: 40))
+                    VStack {
+                        Button {
+                            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: pointOfInterest.coordinates))
+                            mapItem.name = pointOfInterest.title
+                            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+                        } label: {
+                            Image(systemName: "map")
+                                .multilineTextAlignment(.trailing)
+                                .font(.system(size: 40))
+                        }
+                        Button {
+                            if (pointOfInterest.favorite) {
+                                pointOfInterest.favorite = false
+                            } else if (pointOfInterest.favorite == false) {
+                                pointOfInterest.favorite = true
+                            }
+                        } label: {
+                            if (pointOfInterest.favorite) {
+                                Image(systemName: "star.fill")
+                                    .multilineTextAlignment(.trailing)
+                                    .font(.system(size: 40))
+                            } else if (pointOfInterest.favorite == false) {
+                                Image(systemName: "star")
+                                    .multilineTextAlignment(.trailing)
+                                    .font(.system(size: 40))
+                            }
+                        }
                     }
                 }
                 .padding(.bottom, 0)
