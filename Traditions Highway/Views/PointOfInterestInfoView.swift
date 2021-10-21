@@ -11,13 +11,18 @@ import MapKit
 struct PointOfInterestInfoView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showAlert = false
+    @EnvironmentObject var poi: POI
     
-    @State var pointOfInterest: PointOfInterest
+    var pointOfInterest: PointOfInterest
+    
+    var POIIndex: Int {
+        poi.pointsOfInterest.firstIndex(where: {$0.id == pointOfInterest.id })!
+    }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Image(pointOfInterest.image)
+                Image(pointOfInterest.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     
@@ -29,7 +34,7 @@ struct PointOfInterestInfoView: View {
                     Spacer()
                     VStack {
                         Button {
-                            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: pointOfInterest.coordinates))
+                            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: pointOfInterest.locationCoordinate))
                             mapItem.name = pointOfInterest.title
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         } label: {
@@ -37,20 +42,14 @@ struct PointOfInterestInfoView: View {
                                 .multilineTextAlignment(.trailing)
                                 .font(.system(size: 40))
                         }
-                        Button {
-                            if (pointOfInterest.favorite) {
-                                pointOfInterest.favorite = false
-                            } else if (pointOfInterest.favorite == false) {
-                                pointOfInterest.favorite = true
-                            }
-                        } label: {
-                            if (pointOfInterest.favorite) {
+                        Button(action: {
+                            self.poi.pointsOfInterest[self.POIIndex].favorite.toggle()
+                        }) {
+                            if self.poi.pointsOfInterest[self.POIIndex].favorite {
                                 Image(systemName: "star.fill")
-                                    .multilineTextAlignment(.trailing)
                                     .font(.system(size: 40))
-                            } else if (pointOfInterest.favorite == false) {
+                            } else {
                                 Image(systemName: "star")
-                                    .multilineTextAlignment(.trailing)
                                     .font(.system(size: 40))
                             }
                         }
@@ -95,7 +94,7 @@ struct PointOfInterestInfoView: View {
 
 struct PointOfInterestInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        PointOfInterestInfoView(pointOfInterest: pointsOfInterest[0])
+        PointOfInterestInfoView(pointOfInterest: PoiData[0]).environmentObject(POI())
     }
 }
 

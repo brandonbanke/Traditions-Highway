@@ -130,7 +130,7 @@ struct CardViewPOI: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 25, style: .continuous).overlay(
         HStack(alignment: .center) {
-            Image(pointOfInterest.image)
+            Image(pointOfInterest.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 140)

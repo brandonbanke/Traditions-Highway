@@ -12,6 +12,8 @@ struct SearchView: View {
     @State private var searchText = ""
     @State private var isEditing = false
     @State var searchResults: [PointOfInterest]
+    @EnvironmentObject var poi: POI
+    
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
@@ -31,7 +33,7 @@ struct SearchView: View {
                             if isEditing {
                                 Button(action: {
                                     self.searchText = searchText
-                                    searchResults = pointsOfInterest.filter {
+                                    searchResults = poi.pointsOfInterest.filter {
                                         $0.title.contains(searchText)
                                     }
                                 }) {
@@ -59,7 +61,7 @@ struct SearchView: View {
                     }
                 
                 ScrollView {
-                    ForEach(pointsOfInterest.filter {
+                    ForEach(poi.pointsOfInterest.filter {
                         $0.title.contains(searchText)
                     }) { pointOfInterest in
                         CardViewPOI(pointOfInterest: pointOfInterest)
@@ -79,6 +81,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(searchResults: pointsOfInterest)
+        SearchView(searchResults: PoiData).environmentObject(POI())
     }
 }

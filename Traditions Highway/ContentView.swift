@@ -12,6 +12,7 @@ import UserNotifications
 import CoreLocation
 
 struct ContentView: View {
+    @EnvironmentObject var state: POI
     init() {
         UITabBar.appearance().backgroundColor = UIColor.init(named: "NavBar")
         }
@@ -25,11 +26,11 @@ struct ContentView: View {
                 .tabItem {
                     barImage(color: .white, sfImage: "mappin.and.ellipse")
                 }
-            FavoritesView(searchResults: pointsOfInterest)
+            FavoritesView(searchResults: PoiData)
                 .tabItem {
                     barImage(color: .white, sfImage: "star")
                 }
-            SearchView(searchResults: pointsOfInterest)
+            SearchView(searchResults: PoiData)
                 .tabItem {
                     barImage(color: .white, sfImage: "magnifyingglass")
                 }
@@ -38,7 +39,7 @@ struct ContentView: View {
 } // Struct
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(POI())
     }
 }
 

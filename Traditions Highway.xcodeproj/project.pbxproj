@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		492A87EC27146D11000CDDA3 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A87EB27146D11000CDDA3 /* PointOfInterest.swift */; };
 		492A87EE271470B7000CDDA3 /* PointOfInterestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */; };
+		496094AF2721A9AC00CF0ED5 /* POIData.json in Resources */ = {isa = PBXBuildFile; fileRef = 496094AE2721A9AC00CF0ED5 /* POIData.json */; };
+		496094B12721ACC100CF0ED5 /* POIDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496094B02721ACC100CF0ED5 /* POIDataReader.swift */; };
+		496094B32721AD2400CF0ED5 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496094B22721AD2400CF0ED5 /* POI.swift */; };
 		49695F2E26F0F48B0023DF5C /* StructViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49695F2D26F0F48B0023DF5C /* StructViews.swift */; };
 		499AE40B270A122100B04016 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AE40A270A122100B04016 /* LandmarkList.swift */; };
 		499B17E5270234D600ED8E3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B17E4270234D600ED8E3C /* MapView.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		492A87EB27146D11000CDDA3 /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
 		492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestInfoView.swift; sourceTree = "<group>"; };
+		496094AE2721A9AC00CF0ED5 /* POIData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = POIData.json; sourceTree = "<group>"; };
+		496094B02721ACC100CF0ED5 /* POIDataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDataReader.swift; sourceTree = "<group>"; };
+		496094B22721AD2400CF0ED5 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		49695F2D26F0F48B0023DF5C /* StructViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructViews.swift; sourceTree = "<group>"; };
 		499AE40A270A122100B04016 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		499B17E4270234D600ED8E3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 				499AE40A270A122100B04016 /* LandmarkList.swift */,
 				49F148332713F59B00DF9E8E /* Route.swift */,
 				492A87EB27146D11000CDDA3 /* PointOfInterest.swift */,
+				496094AE2721A9AC00CF0ED5 /* POIData.json */,
+				496094B02721ACC100CF0ED5 /* POIDataReader.swift */,
+				496094B22721AD2400CF0ED5 /* POI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B6F85326E7F8C40071441A /* LaunchScreen.storyboard in Resources */,
+				496094AF2721A9AC00CF0ED5 /* POIData.json in Resources */,
 				49B6F85026E7F8C40071441A /* Preview Assets.xcassets in Resources */,
 				49B6F84D26E7F8C40071441A /* Assets.xcassets in Resources */,
 			);
@@ -234,9 +244,11 @@
 				499B17F12703B88000ED8E3C /* PlaceListView.swift in Sources */,
 				49E6B7902704E6E70050F11A /* MapScreen.swift in Sources */,
 				49B6F84926E7F8C10071441A /* SceneDelegate.swift in Sources */,
+				496094B12721ACC100CF0ED5 /* POIDataReader.swift in Sources */,
 				49B6F84B26E7F8C10071441A /* ContentView.swift in Sources */,
 				49D1E60527134DC2008D42E6 /* SearchView.swift in Sources */,
 				499B17E8270236C200ED8E3C /* LocationManager.swift in Sources */,
+				496094B32721AD2400CF0ED5 /* POI.swift in Sources */,
 				49D1E5FF27134C1C008D42E6 /* HomeView.swift in Sources */,
 				499B17EB2703B27E00ED8E3C /* Landmark.swift in Sources */,
 				49695F2E26F0F48B0023DF5C /* StructViews.swift in Sources */,

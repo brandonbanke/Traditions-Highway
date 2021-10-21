@@ -21,7 +21,7 @@ struct MapScreen: View {
     var latitude: String { return("\(lm.location?.latitude ?? 0)") }
     var longitude: String { return("\(lm.location?.longitude ?? 0)") }
     var placemark: String { return("\(lm.placemark?.description ?? "XXX")") }
-    var status: String { return("\(lm.status)") }
+    //var status: String { return("\(lm.status)") }
     
     private func getNearByLandmarks() {
         let request = MKLocalSearch.Request()

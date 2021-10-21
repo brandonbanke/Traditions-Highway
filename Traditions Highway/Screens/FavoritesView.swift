@@ -10,19 +10,20 @@ import SwiftUI
 struct FavoritesView: View {
     @State var selectedPOI: PointOfInterest?
     @State var searchResults: [PointOfInterest]
+    @EnvironmentObject var poi: POI
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
             VStack {
                 Text("FAVORITES").font(.system(size: 30, weight: .bold, design: .default))
                 ScrollView {
-                    ForEach(pointsOfInterest.filter {
-                        $0.favorite == true
-                    }) { pointOfInterest in
+                    ForEach(poi.pointsOfInterest) { pointOfInterest in
+                        if pointOfInterest.favorite {
                         CardViewPOI(pointOfInterest: pointOfInterest)
                             .onTapGesture {
                                 self.selectedPOI = pointOfInterest
                             }
+                        }
                     }
                     .listRowBackground(Color("BackgroundColor"))
                     .sheet(item: self.$selectedPOI) { pointOfInterest in
@@ -36,6 +37,6 @@ struct FavoritesView: View {
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesView(searchResults: pointsOfInterest)
+        FavoritesView(searchResults: PoiData).environmentObject(POI())
     }
 }
