@@ -71,6 +71,7 @@ struct startTripButton: View {
             .overlay(
                 Text(title)
                     .foregroundColor(.white)
+                    .font(.custom("Nexa Bold", size: 17))
             )
             .addBorder(Color.yellow, width: 5, cornerRadius: 20)
         }
@@ -100,11 +101,12 @@ struct CardView: View {
             
             VStack(alignment: .leading) {
                 Text(route.title)
-                    .font(.system(size: 18, weight: .bold, design: .default))
+                    //.font(.system(size: 18, weight: .bold, design: .default))
+                    .font(.custom("Nexa Bold", size: 18))
                     .foregroundColor(.black)
                 HStack {
                     Text(route.summary)
-                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .font(.custom("Frontis-Light", size: 10))
                         .foregroundColor(.black )
                         .padding(.top, 8)
                         .multilineTextAlignment(.leading)
@@ -138,11 +140,11 @@ struct CardViewPOI: View {
             
             VStack(alignment: .leading) {
                 Text(pointOfInterest.title)
-                    .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.black)
+                    .font(.custom("Nexa Bold", size: 18))
                 HStack {
                     Text(pointOfInterest.summary)
-                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .font(.custom("Frontis-Light", size: 10))
                         .foregroundColor(.black )
                         .padding(.top, 8)
                         .multilineTextAlignment(.leading)

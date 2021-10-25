@@ -63,7 +63,7 @@ struct HomeView: View {
                         Image("Logo")
                             .resizable()
                             .frame(width: 70.0, height: 70.0)
-                        NavigationLink(destination: FilterView(filteringList: PoiData)) {
+                        NavigationLink(destination: FilterView()) {
                             startTripButton(color: .black, title: "START MY TRIP")
                         }
                         Spacer()

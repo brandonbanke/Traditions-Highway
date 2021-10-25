@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49294EB42727283C003B5E52 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49294EB32727283C003B5E52 /* Nexa Bold.otf */; };
+		49294EB62727284A003B5E52 /* Frontis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49294EB52727284A003B5E52 /* Frontis-Light.ttf */; };
+		49294EB827272853003B5E52 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49294EB727272853003B5E52 /* Nexa Light.otf */; };
 		492A87EC27146D11000CDDA3 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A87EB27146D11000CDDA3 /* PointOfInterest.swift */; };
 		492A87EE271470B7000CDDA3 /* PointOfInterestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */; };
 		496094AF2721A9AC00CF0ED5 /* POIData.json in Resources */ = {isa = PBXBuildFile; fileRef = 496094AE2721A9AC00CF0ED5 /* POIData.json */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49294EB32727283C003B5E52 /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
+		49294EB52727284A003B5E52 /* Frontis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Frontis-Light.ttf"; sourceTree = "<group>"; };
+		49294EB727272853003B5E52 /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
 		492A87EB27146D11000CDDA3 /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
 		492A87ED271470B7000CDDA3 /* PointOfInterestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestInfoView.swift; sourceTree = "<group>"; };
 		496094AE2721A9AC00CF0ED5 /* POIData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = POIData.json; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				49B6F84C26E7F8C40071441A /* Assets.xcassets */,
 				49B6F85126E7F8C40071441A /* LaunchScreen.storyboard */,
 				49B6F85426E7F8C40071441A /* Info.plist */,
+				49294EB32727283C003B5E52 /* Nexa Bold.otf */,
+				49294EB727272853003B5E52 /* Nexa Light.otf */,
+				49294EB52727284A003B5E52 /* Frontis-Light.ttf */,
 				49B6F84E26E7F8C40071441A /* Preview Content */,
 			);
 			path = "Traditions Highway";
@@ -224,7 +233,10 @@
 				49B6F85326E7F8C40071441A /* LaunchScreen.storyboard in Resources */,
 				496094AF2721A9AC00CF0ED5 /* POIData.json in Resources */,
 				49B6F85026E7F8C40071441A /* Preview Assets.xcassets in Resources */,
+				49294EB42727283C003B5E52 /* Nexa Bold.otf in Resources */,
 				49B6F84D26E7F8C40071441A /* Assets.xcassets in Resources */,
+				49294EB62727284A003B5E52 /* Frontis-Light.ttf in Resources */,
+				49294EB827272853003B5E52 /* Nexa Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

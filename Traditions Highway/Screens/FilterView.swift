@@ -12,7 +12,11 @@ struct FilterView: View {
     @State var isCheckedDining:Bool = false
     @State var isCheckedNature:Bool = false
     @State var isCheckedAttraction:Bool = false
-    @State var filteringList: [PointOfInterest]
+    //@State var filteringList: [PointOfInterest]
+    @State var filteringListHistory = [PointOfInterest]()
+    @State var filteringListNature = [PointOfInterest]()
+    @State var filteringListDining = [PointOfInterest]()
+    @State var filteringListAttraction = [PointOfInterest]()
     var body: some View {
         NavigationView {
             ZStack {
@@ -26,6 +30,9 @@ struct FilterView: View {
                         HStack {
                             Button(action: {
                                 self.isCheckedHistory.toggle()
+                                filteringListHistory = PoiData.filter {
+                                    $0.category.rawValue == "History"
+                                }
                             }, label: {
                                 HStack {
                                     if (self.isCheckedHistory) {
@@ -43,9 +50,12 @@ struct FilterView: View {
                                         .font(.system(size: 25))
                                         .foregroundColor(.black)
                                 }
-                            })
+                            }).padding()
                             Button(action: {
                                 self.isCheckedDining.toggle()
+                                filteringListDining = PoiData.filter {
+                                    $0.category.rawValue == "Dining"
+                                }
                             }, label: {
                                 HStack {
                                     if (self.isCheckedDining) {
@@ -68,6 +78,9 @@ struct FilterView: View {
                         HStack {
                             Button(action: {
                                 self.isCheckedNature.toggle()
+                                filteringListNature = PoiData.filter {
+                                    $0.category.rawValue == "Nature"
+                                }
                             }, label: {
                                 HStack {
                                     if (self.isCheckedNature) {
@@ -85,9 +98,12 @@ struct FilterView: View {
                                         .font(.system(size: 25))
                                         .foregroundColor(.black)
                                 }
-                            })
+                            }).padding()
                             Button(action: {
                                 self.isCheckedAttraction.toggle()
+                                filteringListAttraction = PoiData.filter {
+                                    $0.category.rawValue == "Attraction"
+                                }
                             }, label: {
                                 HStack {
                                     if (self.isCheckedAttraction) {
@@ -109,7 +125,7 @@ struct FilterView: View {
                         }.padding()
                     }
                     Spacer()
-                    NavigationLink(destination: MapScreen(filterResults: filteringList)) {
+                    NavigationLink(destination: MapScreen(filterResults: filteringListHistory+filteringListNature+filteringListDining+filteringListAttraction)) {
                             startTripButton(color: .black, title: "START")
                     }
                     Spacer()
@@ -121,6 +137,6 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView(filteringList: PoiData)
+        FilterView()
     }
 }

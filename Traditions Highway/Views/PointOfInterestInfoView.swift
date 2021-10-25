@@ -28,7 +28,7 @@ struct PointOfInterestInfoView: View {
                     
                 HStack {
                     Text(pointOfInterest.title)
-                        .font(.system(.title, design: .rounded))
+                        .font(.custom("Nexa Bold", size: 35))
                         .fontWeight(.black)
                         .lineLimit(3)
                     Spacer()
@@ -59,10 +59,11 @@ struct PointOfInterestInfoView: View {
                 .padding(.horizontal)
                 
                 Text(pointOfInterest.description)
-                    .font(.body)
+                    .font(.custom("Frontis-Light", size: 20))
                     .padding()
                     .lineLimit(1000)
                     .multilineTextAlignment(.leading)
+                    .lineSpacing(10)
             }
             
         }

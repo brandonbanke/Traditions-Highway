@@ -22,7 +22,7 @@ struct RouteInfoView: View {
                     
                 Group {
                     Text(route.title)
-                        .font(.system(.title, design: .rounded))
+                        .font(.custom("Nexa Bold", size: 35))
                         .fontWeight(.black)
                         .lineLimit(3)
                 }
@@ -30,10 +30,11 @@ struct RouteInfoView: View {
                 .padding(.horizontal)
                 
                 Text(route.description)
-                    .font(.body)
+                    .font(.custom("Frontis-Light", size: 20))
                     .padding()
                     .lineLimit(1000)
                     .multilineTextAlignment(.leading)
+                    .lineSpacing(10)
             } // VStack
             
         } // ScrollView
