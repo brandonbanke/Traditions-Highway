@@ -9,6 +9,7 @@ import Foundation
 import MapKit
 import CoreLocation
 import SwiftUI
+import Contacts
 
 struct PointOfInterest: Hashable, Codable, Identifiable {
     var id: Int
@@ -16,7 +17,7 @@ struct PointOfInterest: Hashable, Codable, Identifiable {
     var imageName: String
     var summary: String
     var description: String
-    fileprivate var coordinates: Coordinates
+    var coordinates: Coordinates
     var category: Category
     var favorite: Bool
     
@@ -24,6 +25,10 @@ struct PointOfInterest: Hashable, Codable, Identifiable {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
+    }
+    
+    var placemarker: MKPlacemark {
+        MKPlacemark(coordinate: locationCoordinate, addressDictionary: [CNPostalAddressStreetKey: title])
     }
 
     enum Category: String, CaseIterable, Codable, Hashable {
@@ -33,13 +38,7 @@ struct PointOfInterest: Hashable, Codable, Identifiable {
         case attraction = "Attraction"
     }
 }
-/*
-extension PointOfInterest {
-    var image: Image {
-        ImageStore.shared.image(name: imageName)
-    }
-}
-*/
+
 struct Coordinates: Hashable, Codable {
     var latitude: Double
     var longitude: Double

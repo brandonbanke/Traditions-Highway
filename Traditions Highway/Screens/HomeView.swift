@@ -13,10 +13,12 @@ import CoreLocation
 
 struct HomeView: View {
     @ObservedObject var locationManager = LocationManager()
-    @State private var landmarks: [Landmark] = [Landmark]()
+    @State private var landmarks: [PointOfInterest] = [PointOfInterest]()
     @State private var search: String = ""
     @State private var tapped: Bool = false
     @State var selectedRoute: Route?
+    @EnvironmentObject var poi: POI
+    /*
     private func getNearByLandmarks() {
             
             let request = MKLocalSearch.Request()
@@ -27,8 +29,10 @@ struct HomeView: View {
                 if let response = response {
                     
                     let mapItems = response.mapItems
-                    self.landmarks = mapItems.map {
-                        Landmark(placemark: $0.placemark)
+                    self.landmarks = mapItems.map {_ in
+                        ForEach(poi.pointsOfInterest) { pointOfInterest in
+                            Landmark(placemark: pointOfInterest.placemarker)
+                        }
                     }
                     
                 }
@@ -36,6 +40,7 @@ struct HomeView: View {
             }
             
         }
+     */
     
     func calculateOffset() -> CGFloat {
             
@@ -104,14 +109,4 @@ func requestNotification() {
                 print(error.localizedDescription)
             }
         }
-}
-
-func scheduleNotification() {
-    let content = UNMutableNotificationContent()
-    content.title = "You are near Journalism!"
-    content.subtitle = "We have NMIX here"
-    content.sound = UNNotificationSound.default
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-    UNUserNotificationCenter.current().add(request)
 }

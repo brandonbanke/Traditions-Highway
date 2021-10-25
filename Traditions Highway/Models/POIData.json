@@ -6,8 +6,8 @@
         "summary": "Goodwin Manor is a two-story antebellum house nestled on two acres just blocks from downtown.",
         "description": "Goodwin Manor is a two-story antebellum house nestled on two acres just blocks from downtown. It has been in the Goodwin family for over 100 years but was most recently renovated in 2010. This Bed & Breakfast offers a wonderful venue for your overnight stay, weddings, parties, or gathering events.",
         "coordinates": {
-          "longitude": 33.572646,
-          "latitude": 83.182439
+          "latitude": 33.572646,
+          "longitude": -83.182439
         },
         "category": "Attraction",
         "favorite": false
@@ -20,8 +20,8 @@
         "summary": "Holcomb's Bar-B-Que is more than just awesome 'que, it's a tradition for generations of patrons.",
         "description": "Holcomb’s Bar-B-Que is a well known dining spot among the local residents of Greensboro. Holcomb’s specializes in traditional south style comfort barbeque and offers the classic Georgia experience.",
         "coordinates": {
-          "longitude": 33.575872,
-          "latitude": -83.187904
+          "latitude": 33.575872,
+          "longitude": -83.187904
         },
         "category": "Dining",
         "favorite": false
@@ -34,8 +34,8 @@
         "summary": "One of thirteen functioning covered bridges in Georgia, and the only covered bridge along the Georgia Antebellum Trail.",
         "description": "The Elder Mill Covered Bridge is one of thirteen functioning covered bridges in Georgia, and the only covered bridge along the Georgia Antebellum Trail. The bridge was built in 1897 to span Calls Creek on the Watkinsville-Athens Road. In 1924 the bridge was moved to its current location spanning Rose Creek. The bridge is one of thirteen operational covered bridges in the state of Georgia and was listed on the National Register of Historic Places in 1994.",
         "coordinates": {
-          "longitude": 33.802994,
-          "latitude": -83.363710
+          "latitude": 33.802994,
+          "longitude": -83.363710
         },
         "category": "History",
         "favorite": false
@@ -48,8 +48,8 @@
         "summary": "Courson's Winery is situated 10 miles from downtown Sparta and boasts 14 different traditional Southern wines.",
         "description": "Courson's Winery is situated 10 miles from downtown Sparta and boasts 14 different traditional Southern wines. Starting a new tradition, Courson's held its inaugural wine festival in 2004, which drew more than 1,500 connoisseurs. Open every day, enthusiasts and novices alike are invited to experience the ambiance and sweet tastes of Courson's Winery. Courson makes the kind of Southern table wine his great-grandfather made, using muscadines, scuppernongs, peaches, apples, plums, blackberries and blueberries. He captures the feel of a homemade wine with his lighter, fruitier, sweeter wines.",
         "coordinates": {
-          "longitude": 33.179291,
-          "latitude": -83.077120
+          "latitude": 33.179291,
+          "longitude": -83.077120
         },
         "category": "Dining",
         "favorite": false
@@ -62,8 +62,8 @@
         "summary": "Guided Kayak and Canoe Trips Along the Oconee River From Athens, Georgia to Lake Oconee, Georgia.",
         "description": "Who is Oconee Joe? The world would like to know. What we can tell you is that he graces our river daily with his historical knowledge and ecology expertise offering guided half-day and over-night kayak excursions to visitors and locals. All sections of the Oconee River are available for tours with over 60 miles of waterways to choose from. Seek out your adventure in the wild woods and waters of the Oconee River Piedmont. Boats and Gear Provided.",
         "coordinates": {
-          "longitude": 33.795173,
-          "latitude": -83.416498
+          "latitude": 33.795173,
+          "longitude": -83.416498
         },
         "category": "Nature",
         "favorite": false
@@ -76,8 +76,8 @@
         "summary": "Heritage Park is 364 acres of attractive park setting with woods, creeks, and the Appalachee River.",
         "description": "Heritage Park is 364 acres of attractive park setting with woods, creeks, and the Appalachee River. The park is a quiet place to take a relaxing walk on the 2.5 miles of walking trails, a challenging bike excursion on the 9.5 miles of bike trails, a scenic ride on the 4.5 miles of equestrian trails, and a family picnic or just a place to breathe in fresh country air.",
         "coordinates": {
-          "longitude": 33.441376,
-          "latitude": -84.120407
+          "latitude": 33.441376,
+          "longitude": -84.120407
         },
         "category": "Nature",
         "favorite": false
@@ -90,8 +90,8 @@
         "summary": "The Okefenokee Swamp is a shallow, 438,000-acre, peat-filled wetland straddling the Georgia–Florida line in the United States.",
         "description": "The Okefenokee Swamp is a shallow, 438,000-acre, peat-filled wetland straddling the Georgia–Florida line in the United States. A majority of the swamp is protected by the Okefenokee National Wildlife Refuge and the Okefenokee Wilderness.",
         "coordinates": {
-          "longitude": 31.056348,
-          "latitude": -82.271735
+          "latitude": 31.056348,
+          "longitude": -82.271735
         },
         "category": "Nature",
         "favorite": false

@@ -13,9 +13,9 @@ final class LandmarkAnnotation: NSObject, MKAnnotation {
     let title: String?
     let coordinate: CLLocationCoordinate2D
 
-    init(landmark: Landmark) {
-        self.title = landmark.name
-        self.coordinate = landmark.coordinate
+    init(landmark: PointOfInterest) {
+        self.title = landmark.title
+        self.coordinate = CLLocationCoordinate2D(latitude: landmark.coordinates.latitude, longitude: landmark.coordinates.longitude)
     }
 }
 

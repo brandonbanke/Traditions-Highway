@@ -12,7 +12,7 @@ import Contacts
 struct MapScreen: View {
     
     @ObservedObject var locationManager = LocationManager()
-    @State private var landmarks: [Landmark] = [Landmark]()
+    @State private var landmarks: [PointOfInterest] = [PointOfInterest]()
     @State private var search: String = ""
     @State private var tapped: Bool = false
     
@@ -22,7 +22,7 @@ struct MapScreen: View {
     var longitude: String { return("\(lm.location?.longitude ?? 0)") }
     var placemark: String { return("\(lm.placemark?.description ?? "XXX")") }
     //var status: String { return("\(lm.status)") }
-    
+    /*
     private func getNearByLandmarks() {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = search
@@ -32,8 +32,8 @@ struct MapScreen: View {
             if let response = response {
                 
                 let mapItems = response.mapItems
-                self.landmarks = mapItems.map {
-                    Landmark(placemark: $0.placemark)
+                self.landmarks = mapItems.map {_ in
+                    PoiData
                 }
                 
             }
@@ -42,10 +42,9 @@ struct MapScreen: View {
         
         
     }
-    
-    
+    */
     func loadLocations() {
-        let landmarkList = LandmarkList.landmarkList
+        let landmarkList = PoiData
         self.landmarks = landmarkList
     }
     
@@ -64,7 +63,7 @@ struct MapScreen: View {
     var body: some View {
         ZStack(alignment: .top) {
             
-            MapView(landmarks: landmarks)
+            MapView(landmarks: PoiData)
                 .ignoresSafeArea()
                 .onAppear(perform: {
                     loadLocations()
