@@ -22,7 +22,7 @@ struct ContentView: View {
                 .tabItem {
                     barImage(color: .white, sfImage: "house")
                 }
-            MapScreen()
+            MapScreen(filterResults: PoiData)
                 .tabItem {
                     barImage(color: .white, sfImage: "mappin.and.ellipse")
                 }

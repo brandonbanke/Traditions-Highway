@@ -11,6 +11,8 @@ import Contacts
 
 struct MapScreen: View {
     
+    @State var filterResults: [PointOfInterest]
+    
     @ObservedObject var locationManager = LocationManager()
     @State private var landmarks: [PointOfInterest] = [PointOfInterest]()
     @State private var search: String = ""
@@ -44,7 +46,8 @@ struct MapScreen: View {
     }
     */
     func loadLocations() {
-        let landmarkList = PoiData
+        //let landmarkList = PoiData
+        let landmarkList = filterResults
         self.landmarks = landmarkList
     }
     
@@ -63,7 +66,8 @@ struct MapScreen: View {
     var body: some View {
         ZStack(alignment: .top) {
             
-            MapView(landmarks: PoiData)
+            //MapView(landmarks: PoiData)
+            MapView(landmarks: filterResults)
                 .ignoresSafeArea()
                 .onAppear(perform: {
                     loadLocations()
@@ -80,6 +84,6 @@ struct MapScreen: View {
 
 struct MapScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MapScreen()
+        MapScreen(filterResults: PoiData)
     }
 }

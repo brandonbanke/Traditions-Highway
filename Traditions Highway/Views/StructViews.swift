@@ -161,6 +161,28 @@ struct CardViewPOI: View {
     }
 }
 
+struct FilterBox: View {
+    //var title: String
+    
+    var body: some View {
+        //HStack {
+            ZStack {
+            Rectangle()
+                .frame(width: 60, height: 60)
+                .foregroundColor(.white)
+                .cornerRadius(20.0)
+                .addBorder(Color.black, width: 3, cornerRadius: 20)
+                .multilineTextAlignment(.leading)
+            }
+            /*
+            Text(title)
+                .multilineTextAlignment(.leading)
+                .font(.system(size: 25))
+             */
+        //}
+    }
+}
+
 extension View {
      public func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {
          let roundedRect = RoundedRectangle(cornerRadius: cornerRadius)

@@ -20,6 +20,7 @@ struct PointOfInterest: Hashable, Codable, Identifiable {
     var coordinates: Coordinates
     var category: Category
     var favorite: Bool
+    var isShowing: Bool
     
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
