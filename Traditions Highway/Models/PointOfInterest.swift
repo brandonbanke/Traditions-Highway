@@ -15,12 +15,15 @@ struct PointOfInterest: Hashable, Codable, Identifiable {
     var id: Int
     var title: String
     var imageName: String
+    var address: String
+    var hours: HoursOpen
     var summary: String
     var description: String
     var coordinates: Coordinates
     var category: Category
     var favorite: Bool
     var isShowing: Bool
+    var hasHours: Bool
     
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
@@ -43,5 +46,15 @@ struct PointOfInterest: Hashable, Codable, Identifiable {
 struct Coordinates: Hashable, Codable {
     var latitude: Double
     var longitude: Double
+}
+
+struct HoursOpen: Hashable, Codable {
+    var monHours: String
+    var tuesHours: String
+    var wedHours: String
+    var thursHours: String
+    var friHours: String
+    var satHours: String
+    var sunHours: String
 }
 

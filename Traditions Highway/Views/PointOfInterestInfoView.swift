@@ -27,10 +27,15 @@ struct PointOfInterestInfoView: View {
                     .aspectRatio(contentMode: .fit)
                     
                 HStack {
-                    Text(pointOfInterest.title)
-                        .font(.custom("Nexa Bold", size: 35))
-                        .fontWeight(.black)
-                        .lineLimit(3)
+                    VStack(alignment: .leading) {
+                        Text(pointOfInterest.title)
+                            .font(.custom("Nexa Bold", size: 35))
+                            .fontWeight(.black)
+                            .lineLimit(3)
+                        Text(pointOfInterest.address)
+                            .font(.custom("Nexa Light", size: 16))
+                            .multilineTextAlignment(.leading)
+                    }
                     Spacer()
                     VStack {
                         Button {
@@ -58,12 +63,37 @@ struct PointOfInterestInfoView: View {
                 .padding(.bottom, 0)
                 .padding(.horizontal)
                 
-                Text(pointOfInterest.description)
-                    .font(.custom("Frontis-Light", size: 20))
-                    .padding()
-                    .lineLimit(1000)
-                    .multilineTextAlignment(.leading)
-                    .lineSpacing(10)
+                VStack {
+                    Text(pointOfInterest.description)
+                        .font(.custom("Frontis-Light", size: 20))
+                        .padding()
+                        .lineLimit(1000)
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(10)
+
+                    if (pointOfInterest.hasHours) {
+                        Text("Hours of Operation")
+                            .font(.custom("Nexa Light", size: 20))
+                            .underline()
+                            .padding()
+                    VStack(alignment: .leading){
+                        Text("Monday: " + pointOfInterest.hours.monHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                        Text("Tuesday: " + pointOfInterest.hours.tuesHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                        Text("Wednesday: " + pointOfInterest.hours.wedHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                        Text("Thursday: " + pointOfInterest.hours.thursHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                        Text("Friday: " + pointOfInterest.hours.friHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                        Text("Saturday: " + pointOfInterest.hours.satHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                        Text("Sunday: " + pointOfInterest.hours.sunHours)
+                            .font(.custom("Frontis-Light", size: 20))
+                    }
+                    }
+                }
             }
             
         }

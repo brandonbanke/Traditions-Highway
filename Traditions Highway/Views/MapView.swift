@@ -69,6 +69,12 @@ struct MapView: UIViewRepresentable {
 
       
     }
+    @State var selectedAnnotation: LandmarkAnnotation?
+
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        self.selectedAnnotation = view.annotation as? LandmarkAnnotation
+        //print(selectedAnnotation?.title)
+    }
     
 }
 
