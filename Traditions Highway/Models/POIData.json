@@ -1,9 +1,165 @@
 [
     {
         "id": 1001,
-        "title": "Goodwin Manor",
+        "title": "Appling County Heritage Center",
         "imageName": "goodwin_manor",
-        "address": " 306 S Main St Greensboro, GA 30642",
+        "address": "209 Thomas St. Baxley GA 31513",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "11:00am - 4:30pm",
+            "wedHours": "11:00am - 4:30pm",
+            "thursHours": "11:00am - 4:30pm",
+            "friHours": "11:00am - 4:30pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "The Appling County Heritage Center offers a wide variety of items and records that detail the history of the county.",
+        "description": "The Appling County Heritage Center offers a wide variety of items and records that detail the history of the county. Some of the special features include a growing turpentine collection, agricultural implements, 19th and 20th century memorabilia, items representing county architecture, black history, genealogy library, county records and manuscripts, a war room, collections and publications by local historians.",
+        "coordinates": {
+          "latitude": 31.7828,
+          "longitude": -82.3500
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1002,
+        "title": "Bank of Surrency",
+        "imageName": "goodwin_manor",
+        "address": "80 Hart St., Surrency, Georgia",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "11:00am - 4:30pm",
+            "wedHours": "11:00am - 4:30pm",
+            "thursHours": "11:00am - 4:30pm",
+            "friHours": "11:00am - 4:30pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "The Bank of Surrency served as Surrency's post office from 1926 to 1960.",
+        "description": "The Bank of Surrency, Surrency, Georgia, was built in 1911. It is a small Early Commercial-style building and has also been known as Surrency Post Office. It was listed on the National Register of Historic Places in 2003. It served as Surrency's post office from 1926 to 1960. It was later used for sweet potato storage. It was bought in 1999 by the City of Surrency with plans to develop it as a local museum and visitor's welcome center. Vacant in 2000, it was in use as city hall in 2007.",
+        "coordinates": {
+          "latitude": 31.723753,
+          "longitude": -82.196928
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1003,
+        "title": "Sips and Such Cafe",
+        "imageName": "goodwin_manor",
+        "address": "489 North Blvd, Baxley, GA 31513",
+        "hours": {
+            "monHours": "6:45am - 5:30pm",
+            "tuesHours": "6:45am - 5:30pm",
+            "wedHours": "6:45am - 5:30pm",
+            "thursHours": "6:45am - 5:30pm",
+            "friHours": "6:45am - 5:30pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": " Sips and Such Cafe is a local Baxley favorite, with delicious breakfast and lunch offerings.",
+        "description": "Sips and Such Cafe is a local Baxley favorite, with delicious breakfast and lunch offerings. The menu includes a variety of coffee drinks and flavors, smoothies, sandwiches and more! The cafe is a local favorite and has glowing reviews.",
+        "coordinates": {
+          "latitude": 31.785000,
+          "longitude": -82.349856
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1004,
+        "title": "K & L Barbecue",
+        "imageName": "goodwin_manor",
+        "address": "56 Luckie Street Baxley, GA 31513",
+        "hours": {
+            "monHours": "10:30am - 8:00pm",
+            "tuesHours": "10:30am - 8:00pm",
+            "wedHours": "10:30am - 8:00pm",
+            "thursHours": "10:30am - 8:00pm",
+            "friHours": "10:30am - 9:00pm",
+            "satHours": "10:30am - 6:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "K & L Bar-B-Que offers southern BBQ favorites like chicken, ribs, burgers and wings.",
+        "description": "K & L Bar-B-Que offers southern BBQ favorites like chicken, ribs, burgers and wings. Established over 10 years ago with loyal customers, K & L Barbecue has solidified itself as Appling’s go-to barbecue spot.",
+        "coordinates": {
+          "latitude": 31.776659,
+          "longitude": -82.351271
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1005,
+        "title": "Hardware 341 Grill",
+        "imageName": "goodwin_manor",
+        "address": "118 Azalea Rd. Ste 6 Baxley GA 31513",
+        "hours": {
+            "monHours": "10:30am - 8:00pm",
+            "tuesHours": "10:30am - 8:00pm",
+            "wedHours": "10:30am - 8:00pm",
+            "thursHours": "10:30am - 8:00pm",
+            "friHours": "10:30am - 9:00pm",
+            "satHours": "10:30am - 6:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Hardware 341 Grill is known for its authentic pizza pies and is a top rated Italian restaurant.",
+        "description": "Hardware 341 Grill is known for its authentic pizza pies and is a top rated Italian restaurant. It also offers appetizers, salads, sandwiches, desserts and more.",
+        "coordinates": {
+          "latitude": 31.785068,
+          "longitude": -82.362571
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1006,
+        "title": "Dick’s Wings and Grill",
+        "imageName": "goodwin_manor",
+        "address": "895 South Main Street Baxley GA 31513",
+        "hours": {
+            "monHours": "11:00am-9:00pm",
+            "tuesHours": "11:00am-9:00pm",
+            "wedHours": "11:00am-9:00pm",
+            "thursHours": "11:00am-9:00pm",
+            "friHours": "11:00am - 10:00pm",
+            "satHours": "11:00am - 10:00pm",
+            "sunHours": "11:00am-9:00pm",
+        },
+        "summary": "Established in 1994 in Jacksonville Florida Is a family-friendly neighborhood restaurant.",
+        "description": "Established in 1994 in Jacksonville Florida as a family-friendly neighborhood restaurant, Dick’s Wings & Grill® was a hot sensation from the very beginning. Our energetic, sport-themed atmosphere attracts families and friends out for an evening of fun, and offers locals a great place to relax and enjoy the game. From lighter fare and kids specialties to wings and beer, Dick’s Wings offers selections everyone will enjoy. Our franchise family has won several local “Best Of” awards in North Florida and South Georgia for our unique wings and juicy burgers.",
+        "coordinates": {
+          "latitude": 31.766217,
+          "longitude": -82.353781
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1007,
+        "title": "Deen's Landing",
+        "imageName": "goodwin_manor",
+        "address": "Old River Rd. Baxley, GA 31513",
         "hours": {
             "monHours": "24 Hours",
             "tuesHours": "24 Hours",
@@ -13,11 +169,206 @@
             "satHours": "24 Hours",
             "sunHours": "24 Hours",
         },
-        "summary": "Goodwin Manor is a two-story antebellum house nestled on two acres just blocks from downtown.",
-        "description": "Goodwin Manor is a two-story antebellum house nestled on two acres just blocks from downtown. It has been in the Goodwin family for over 100 years but was most recently renovated in 2010. This Bed & Breakfast offers a wonderful venue for your overnight stay, weddings, parties, or gathering events.",
+        "summary": "Located on the banks of the Altamaha River, the largest and most beautiful river east of the Mississippi.",
+        "description": "Located on the banks of the Altamaha River, the largest and most beautiful river east of the Mississippi. Our facilities include full hook-up sites, pull thru sites and picnic tables. Play area. Stairway to river and trail along river bank. Public boat landing borders park. Pets allowed on leash under 10 pounds.",
         "coordinates": {
-          "latitude": 33.572646,
-          "longitude": -83.182439
+            "latitude": 31.939926,
+            "longitude": -82.378293
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1008,
+        "title": "Moody Forest",
+        "imageName": "",
+        "address": "Baxley, GA 31513 United States",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Visit the preserve to hike its trails, though, and its name takes on a whole different meaning.",
+        "description": "Moody Forest Natural Area is named for the Moody family, which arrived in Appling County in the mid-1800s and spent much of the next century on the land, living amongst the longleaf pine trees and alongside the Altamaha River. Visit the preserve to hike its trails, though, and its name takes on a whole different meaning, one that perfectly encapsulates the ethereal beauty of the 4,426-acre wilderness. Old-growth longleaf and slash pines rise to guard the misty waters of the Altamaha River as it carves through cypress and tupelo swamps. Sunshine filters through dogwoods and basket oaks, tossing light and shadows onto fallen leaves. The sounds of nature are constant: the low call of wild turkeys, the echo of red-cockaded woodpeckers at work and the wind in the high canopy of longleaf pines.",
+        "coordinates": {
+          "latitude": 31.9107128,
+          "longitude": -82.3106979
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1009,
+        "title": "Altamaha River Bioreserve",
+        "imageName": "",
+        "address": "1605 Altamaha Park Rd Brunswick, GA 31525 United States",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "This 137-mile alluvial river is one of the great natural treasures of the eastern United States.",
+        "description": "This 137-mile alluvial river is one of the great natural treasures of the eastern United States, flowing undammed from its creation at the confluence of the Oconee and Ocmulgee rivers near Hazlehurst to the multichannel river delta near Darien.",
+        "coordinates": {
+          "latitude": 31.421320,
+          "longitude": -81.612378
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 1010,
+        "title": "Railroad Transportation Museum",
+        "imageName": "",
+        "address": "3795 Main St. Folkston, GA 31537",
+        "hours": {
+            "monHours": "9:00am - 5:00pm",
+            "tuesHours": "9:00am - 5:00pm",
+            "wedHours": "9:00am - 5:00pm",
+            "thursHours": "9:00am - 5:00pm",
+            "friHours": "9:00am - 5:00pm",
+            "satHours": "10:00am - 3:00pm",
+            "sunHours": "10:00am - 3:00pm",
+        },
+        "summary": "This town’s passion for their railroad heritage is much of what keeps the history alive and thriving.",
+        "description": "Nearly fifty years ago this train museum was a bustling train depot. Today, you can find the same depot well preserved as the Folkston Railroad Transportation Museum. This town’s passion for their railroad heritage is much of what keeps the history alive and thriving. Through the efforts of many, visitors can explore genuine railroad artifacts, tour the Cookie Williams Model Train Room, see a one-of-a-kind radio exhibit spanning four decades of radio communication, and learn about the railroad history that shaped the lives and culture of Folkston’s people.",
+        "coordinates": {
+          "latitude": 30.8323,
+          "longitude": -82.0087
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1011,
+        "title": "Chesser Island Homestead",
+        "imageName": "",
+        "address": "2700 North Suwannee Canal Road Folkston, GA 31537",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "See how the Chesser’s lived simply and worked hard by touring their syrup shed, chicken coop, corncrib, hogpen, and smokehouse.",
+        "description": "Historic Chesser Island Homestead was once settled by pioneers in the mid-1800’s at the edge of the Okefenokee Swamp. The rooms of this home are complete with traditional settler furnishings. See how the Chesser’s lived simply and worked hard by touring their syrup shed, chicken coop, corncrib, hogpen, and smokehouse. Surrounded by the home is a sandy lot that was constantly raked and maintained to spot any critter tracks and reduce fire danger from the swamp.",
+        "coordinates": {
+          "latitude": 30.7417,
+          "longitude": -82.1171
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1012,
+        "title": "Whistlin’ Dixie",
+        "imageName": "",
+        "address": "3742 W Main St, Folkston, GA 31537",
+        "hours": {
+            "monHours": "9:00am – 3:00pm",
+            "tuesHours": "9:00am – 3:00pm",
+            "wedHours": "Closed",
+            "thursHours": "9:00am – 3:00pm",
+            "friHours": "9:00am – 3:00pm",
+            "satHours": "9:00am – 3:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Whistlin Dixie the BEST coffee in town! We offer unique gifts, framing, ice cream and even lunch on specific days!",
+        "description": "Whistlin Dixie the BEST coffee in town! We offer unique gifts, framing, ice cream and even lunch on specific days!",
+        "coordinates": {
+          "latitude": 30.8293,
+          "longitude": -82.0254
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1013,
+        "title": "Okefenokee National Wildlife Refuge",
+        "imageName": "",
+        "address": "2700 Suwannee Canal Rd. Folkston GA 31537",
+        "hours": {
+            "monHours": "7:00am - 7:30pm",
+            "tuesHours": "7:00am - 7:30pm",
+            "wedHours": "7:00am - 7:30pm",
+            "thursHours": "7:00am - 7:30pm",
+            "friHours": "7:00am - 7:30pm",
+            "satHours": "7:00am - 7:30pm",
+            "sunHours": "7:00am - 7:30pm",
+        },
+        "summary": "This pristine 680-square-mile wilderness is an ecological wonder.",
+        "description": "Take a walk on the wild side at Okefenokee National Wildlife Refuge! This pristine 680-square-mile wilderness is an ecological wonder. The main entrance to the National Wildlife Refuge is located near Folkston, GA, approximately one hour from Jacksonville, FL.",
+        "coordinates": {
+          "latitude": 30.7420,
+          "longitude": -82.1167
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1014,
+        "title": "Folkston Funnel",
+        "imageName": "",
+        "address": "16 Oakwood Street Folkston, GA 31537",
+        "hours": {
+            "monHours": "24 Hours",
+            "tuesHours": "24 Hours",
+            "wedHours": "24 Hours",
+            "thursHours": "24 Hours",
+            "friHours": "24 Hours",
+            "satHours": "24 Hours",
+            "sunHours": "24 Hours",
+        },
+        "summary": "The trains that rumble through Folkson attracts rail fans from all over the nation and globe at Railwatch.",
+        "description": "The trains that rumble through Folkson attracts rail fans from all over the nation and globe at Railwatch. These semi-annual events take place in the second weekend of April and the first weekend of December. These train-watching festival’s appear to grow each year, especially since the Folkston Funnel comes up on any online search for train watchers. The event takes place at the Folkston Funnel viewing platform located on Railroad Street in downtown Folkston. The expansive covered platform is equipped with a scanner tuned to CSXT’s frequencies, free WI FI, ceiling fans, lights, electric outlets, and flood lights for nighttime viewing, picnic tables, and grill and public restrooms. Most train watchers congregate here on Railwatch Day, but train lovers also line the tracks all over town, bringing lawn chairs, and even campers or motor homes. Train watchers can enjoy photography, videos, a potluck barbeque, a photography contest, and – of course – train watching.",
+        "coordinates": {
+          "latitude": 30.8301,
+          "longitude": -82.0102
         },
         "category": "Attraction",
         "favorite": false,
@@ -25,8 +376,77 @@
         "hasHours": true
     },
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     {
-        "id": 1002,
+        "id": 1015,
+        "title": "Historic Springfield Baptist Church",
+        "imageName": "",
+        "address": "246-298 E Second St Greensboro, GA 30642",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "Closed",
+            "friHours": "Closed",
+            "satHours": "Closed",
+            "sunHours": "10:45am - 12:00pm",
+        },
+        "summary": "HSBC was erected in 1864 as the first African American church in Greensboro, GA.",
+        "description": "HSBC was erected in 1864 as the first African American church in Greensboro, GA.  We must never forget the sacrifices and labor of love that OUR forefathers gave in order that we might enjoy the freedom of worship and a sanctuary to honor God",
+        "coordinates": {
+          "latitude": 33.568512,
+          "longitude":  -83.177729
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1016,
+        "title": "Old Gao",
+        "imageName": "",
+        "address": "E. Greene St. Greensboro, GA 30642",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Built of granite from a local quarry, the walls are 2 feet thick. It is the oldest standing masonry jail in Georgia.",
+        "description": "In 1807, the Superior Court of Greene County recommended that a substantial jail be built. The \"rock gaol\" is the product of that request. Built of granite from a local quarry, the walls are 2 feet thick. It is the oldest standing masonry jail in Georgia.",
+        "coordinates": {
+          "latitude": 33.568512,
+          "longitude": -83.177729
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1017,
         "title": "Holcomb’s Bar-B-Que",
         "imageName": "holcomb_bbq",
         "address": " 306 S Main St Greensboro, GA 30642",
@@ -50,35 +470,35 @@
         "isShowing": false,
         "hasHours": true
     },
-
+    
     {
-        "id": 1003,
-        "title": "Elder Mill Covered Bridge",
-        "imageName": "elder_bridge",
-        "address": " 306 S Main St Greensboro, GA 30642",
+        "id": 1018,
+        "title": "National Tavern at Reynolds Lake Oconee",
+        "imageName": "",
+        "address": "1145 National Dr, Greensboro, GA 30642, USA",
         "hours": {
-            "monHours": "Always Open",
-            "tuesHours": "Always Open",
-            "wedHours": "Always Open",
-            "thursHours": "Always Open",
-            "friHours": "Always Open",
-            "satHours": "Always Open",
-            "sunHours": "Always Open",
+            "monHours": "Closed",
+            "tuesHours": "11:00am - 9:00pm",
+            "wedHours": "11:00am - 9:00pm",
+            "thursHours": "11:00am - 9:00pm",
+            "friHours": "11:00am - 9:00pm",
+            "satHours": "11:00am - 9:00pm",
+            "sunHours": "11:00am - 9:00pm",
         },
-        "summary": "One of thirteen functioning covered bridges in Georgia, and the only covered bridge along the Georgia Antebellum Trail.",
-        "description": "The Elder Mill Covered Bridge is one of thirteen functioning covered bridges in Georgia, and the only covered bridge along the Georgia Antebellum Trail. The bridge was built in 1897 to span Calls Creek on the Watkinsville-Athens Road. In 1924 the bridge was moved to its current location spanning Rose Creek. The bridge is one of thirteen operational covered bridges in the state of Georgia and was listed on the National Register of Historic Places in 1994.",
+        "summary": "The quintessential urban tavern situated in the heart of Reynolds golf and lake country.",
+        "description": "The quintessential urban tavern situated in the heart of Reynolds golf and lake country.  The Reynolds culinary team sources locally grown and seasonal ingredients to create innovative and fun twists on traditional favorites, delivered in a warm and inviting pub-like surrounding. Join them for lunch or dinner at the bar and lounge, in the dining room, or on either of their verandas with sweeping views. Watch the game in casual comfort or cozy up by the fire-pit. Gather round!",
         "coordinates": {
-          "latitude": 33.802994,
-          "longitude": -83.363710
+          "latitude": 33.422872,
+          "longitude": -83.210405
         },
-        "category": "History",
+        "category": "Dining",
         "favorite": false,
         "isShowing": false,
         "hasHours": true
     },
     
     {
-        "id": 1004,
+        "id": 1019,
         "title": "Courson’s Winery",
         "imageName": "courson_winery",
         "address": " 306 S Main St Greensboro, GA 30642",
@@ -104,7 +524,111 @@
     },
     
     {
-        "id": 1005,
+        "id": 1020,
+        "title": "Oconee Brewing Company",
+        "imageName": "",
+        "address": "202 N West St. Greensboro, GA 30642",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "4:00pm - 8:00pm",
+            "friHours": "4:00pm - 8:00pm",
+            "satHours": "2:00pm - 8:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Oconee Brewing Company is a craft beer production facility with a tasting room.",
+        "description": "Oconee Brewing Company is a craft beer production facility with a tasting room.  A 3,600 square foot event center includes an 18 foot high, floor to ceiling, glass curtain wall that opens to an outdoor patio.",
+        "coordinates": {
+          "latitude": 33.577768,
+          "longitude": -83.184291
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1021,
+        "title": "Ripe Thing Market",
+        "imageName": "",
+        "address": "112 West Broad Street, Greensboro, GA 30642, USA",
+        "hours": {
+            "monHours": "10:00am - 6:00pm",
+            "tuesHours": "10:00am - 6:00pm",
+            "wedHours": "10:00am - 6:00pm",
+            "thursHours": "10:00am - 6:00pm",
+            "friHours": "10:00am - 6:00pm",
+            "satHours": "10:00am - 6:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Ripe Thing serves only the freshest produce and the finest products.",
+        "description": "Ripe Thing serves only the freshest produce and the finest products. Enjoy the open-air market in the warmer months, Boar’s Head sandwiches and homemade soups from the deli, or maybe grab a Jittery Joe’s coffee. Fresh, local produce is always in season; great varieties and lines of products include Red Mule, Way Better Snacks, Sweet Tea’s Olive Oil soap, even a line of Amish jams and jellies, of which you can usually find a free sample somewhere in the store. If nothing else, you’ll always be greeted with smiling, friendly staff.",
+        "coordinates": {
+          "latitude": 33.575819,
+          "longitude": -83.183905
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1022,
+        "title": "Courson’s Winery",
+        "imageName": "courson_winery",
+        "address": " 306 S Main St Greensboro, GA 30642",
+        "hours": {
+            "monHours": "Always Open",
+            "tuesHours": "Always Open",
+            "wedHours": "Always Open",
+            "thursHours": "Always Open",
+            "friHours": "Always Open",
+            "satHours": "Always Open",
+            "sunHours": "Always Open",
+        },
+        "summary": "Courson's Winery is situated 10 miles from downtown Sparta and boasts 14 different traditional Southern wines.",
+        "description": "Courson's Winery is situated 10 miles from downtown Sparta and boasts 14 different traditional Southern wines. Starting a new tradition, Courson's held its inaugural wine festival in 2004, which drew more than 1,500 connoisseurs. Open every day, enthusiasts and novices alike are invited to experience the ambiance and sweet tastes of Courson's Winery. Courson makes the kind of Southern table wine his great-grandfather made, using muscadines, scuppernongs, peaches, apples, plums, blackberries and blueberries. He captures the feel of a homemade wine with his lighter, fruitier, sweeter wines.",
+        "coordinates": {
+          "latitude": 33.179291,
+          "longitude": -83.077120
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1023,
+        "title": "Okefenokee Swamp",
+        "imageName": "okefenokee_swamp",
+        "address": " 306 S Main St Greensboro, GA 30642",
+        "hours": {
+            "monHours": "Always Open",
+            "tuesHours": "Always Open",
+            "wedHours": "Always Open",
+            "thursHours": "Always Open",
+            "friHours": "Always Open",
+            "satHours": "Always Open",
+            "sunHours": "Always Open",
+        },
+        "summary": "The Okefenokee Swamp is a shallow, 438,000-acre, peat-filled wetland straddling the Georgia–Florida line in the United States.",
+        "description": "The Okefenokee Swamp is a shallow, 438,000-acre, peat-filled wetland straddling the Georgia–Florida line in the United States. A majority of the swamp is protected by the Okefenokee National Wildlife Refuge and the Okefenokee Wilderness.",
+        "coordinates": {
+          "latitude": 31.056348,
+          "longitude": -82.271735
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1024,
         "title": "Oconee Joe",
         "imageName": "oconee_joe",
         "address": " 306 S Main St Greensboro, GA 30642",
@@ -128,12 +652,560 @@
         "isShowing": false,
         "hasHours": true
     },
+
     
     {
-        "id": 1006,
-        "title": "Heritage Park",
-        "imageName": "heritage_park",
+        "id": 1025,
+        "title": "Old Salem Park",
+        "imageName": "",
+        "address": "Old Salem Campground 1530 Old Salem Rd, Greensboro, GA 30642, USA",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Shut down your phone and be one with nature at this beautiful, full-service campground.",
+        "description": "Shut down your phone and be one with nature at this beautiful, full-service campground. At Old Salem primitive campsites, you’ll find peace and tranquility, and enjoy lovely scenery and nearby communities that are steeped in history. There’s something fun for the whole outdoorsy family including day-use picnic areas, swimming beach and playground, boat ramp, grill and pavilion for events and reunions.",
+        "coordinates": {
+          "latitude": 33.450943,
+          "longitude": -83.234752
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1026,
+        "title": "Park Ferry Campground",
+        "imageName": "",
+        "address": "1491 Parks Mill Rd. Greensboro GA 30642",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Relax, go fishing or spend quality time with family and friends at the campgrounds in east Georgia.",
+        "description": "Relax, go fishing or spend quality time with family and friends at the campgrounds in east Georgia. Here, you'll find peace and tranquility, as well as beautiful scenery and nearby communities that are steeped in history. Local shops and boutiques offer the finest in antiques, fashion, decorative accessories and jewelry. We ask all campers to vacate their site by 1:00 p.m. on day of check-out.",
+        "coordinates": {
+          "latitude": 33.521987,
+          "longitude":  -83.269065
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1027,
+        "title": "Redlands Wildlife Management Area",
+        "imageName": "",
+        "address": "Athens Highway Greensboro, GA 30642",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Redlands Wildlife Management Area is spread over Greene, Oglethorpe, Oconee and Morgan counties.",
+        "description": "Redlands Wildlife Management Area is spread over Greene, Oglethorpe, Oconee and Morgan counties. The 37,500-acre property offers hunting opportunities for deer, turkey, small game and dove. There is no hunting on Dyers Pasture marsh pond.",
+        "coordinates": {
+          "latitude": 33.672686,
+          "longitude": -83.265047
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1028,
+        "title": "Highgate Estate & Gardens",
+        "imageName": "",
+        "address": "301 W. Greene St. Greensboro, GA 30642",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Highgate Estate & Gardens is a bed & breakfast and a wedding, event and concert venue.",
+        "description": "Highgate Estate & Gardens is a bed & breakfast and a wedding, event and concert venue with two acres of gardens, an historic house dating from 1810, a pavilion that has seating for up to 150 guests, a full-service bar, an elevated spacious dance floor with incredible lighting, a complete sound system and a separate lounge area.",
+        "coordinates": {
+          "latitude": 33.577911,
+          "longitude": -83.185957
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1029,
+        "title": "The Preserve Golf Course at Reynolds Lake",
+        "imageName": "",
+        "address": "1091 Clubhouse Ln, Greensboro, GA 30642",
+        "hours": {
+            "monHours": "7:30am - 7:00pm",
+            "tuesHours": "7:30am - 7:00pm",
+            "wedHours": "Closed",
+            "thursHours": "7:30am - 7:00pm",
+            "friHours": "7:30am - 7:00pm",
+            "satHours": "7:30am - 7:00pm",
+            "sunHours": "7:30am - 7:00pm",
+        },
+        "summary": "An immensely playable course with back tees challenging enough for low handicappers and forward tees forgiving enough for beginners.",
+        "description": "For the inaugural course at Reynolds Lake Oconee, Bob Cupp was hired along with player consultants Fuzzy Zoeller and Hubert Green. The Preserve incorporates Cupp’s essential design principle of subtle deception and Fuzzy’s philosophy of making the game fun for players of all levels by taking advantage of the natural rolling topography. The result is an immensely playable course with back tees challenging enough for low handicappers and forward tees forgiving enough for beginners. In 2016 a fun and unique six-hole course within a course called the Quick Six was added to The Preserve.",
+        "coordinates": {
+          "latitude": 33.425753,
+          "longitude": -83.221095
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1030,
+        "title": "Greensboro Antique Mall",
+        "imageName": "",
+        "address": "101 S Main Street Greensboro, GA 30642",
+        "hours": {
+            "monHours": "10:00am - 5:30pm",
+            "tuesHours": "10:00am - 5:30pm",
+            "wedHours": "10:00am - 5:30pm",
+            "thursHours": "10:00am - 5:30pm",
+            "friHours": "10:00am - 5:30pm",
+            "satHours": "10:00am - 5:30pm",
+            "sunHours": "1:00pm - 5:00pm",
+        },
+        "summary": "For all your antique item needs, contact Greensboro Antique Mall.",
+        "description": "For all your antique item needs, contact Greensboro Antique Mall. Established in 1860 by Mr. Charles Davis, our antique store provides a large selection of quality antique items to the Lake Oconee region. The antique store is located in a dwelling listed on the National Register of Historic Places.",
+        "coordinates": {
+          "latitude": 33.575767,
+          "longitude": -83.182806
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1031,
+        "title": "Goodwin Manor",
+        "imageName": "goodwin_manor",
         "address": " 306 S Main St Greensboro, GA 30642",
+        "hours": {
+            "monHours": "24 Hours",
+            "tuesHours": "24 Hours",
+            "wedHours": "24 Hours",
+            "thursHours": "24 Hours",
+            "friHours": "24 Hours",
+            "satHours": "24 Hours",
+            "sunHours": "24 Hours",
+        },
+        "summary": "Goodwin Manor is a two-story antebellum house nestled on two acres just blocks from downtown.",
+        "description": "Goodwin Manor is a two-story antebellum house nestled on two acres just blocks from downtown. It has been in the Goodwin family for over 100 years but was most recently renovated in 2010. This Bed & Breakfast offers a wonderful venue for your overnight stay, weddings, parties, or gathering events.",
+        "coordinates": {
+          "latitude": 33.572646,
+          "longitude": -83.182439
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1032,
+        "title": "Genuine Georgia",
+        "imageName": "",
+        "address": "102 South Main Street, Greensboro, GA 30642",
+        "hours": {
+            "monHours": "10:00am - 5:00pm",
+            "tuesHours": "10:00am - 5:00pm",
+            "wedHours": "10:00am - 5:00pm",
+            "thursHours": "10:00am - 5:00pm",
+            "friHours": "10:00am - 5:00pm",
+            "satHours": "10:00am - 5:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Genuine Georgia, Historic Downtown Greensboro’s Artisan Marketplace, offers patrons original gifts and unique art, hand-crafted exclusively by Georgia artists.",
+        "description": "Genuine Georgia, Historic Downtown Greensboro’s Artisan Marketplace, offers patrons original gifts and unique art, hand-crafted exclusively by Georgia artists. Genuine Georgia curates, showcases, and provides in one location over 100 Georgia Artists’ works for purchase. The store experience enlivens each and every sense, creating an atmosphere of artistic appreciation.",
+        "coordinates": {
+          "latitude": 33.575722,
+          "longitude": -83.182460
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 1033,
+        "title": "Holsey Memorial CME Church",
+        "imageName": "",
+        "address": "187 Ghettis St, Sparta, GA 31087",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "Closed",
+            "friHours": "Closed",
+            "satHours": "Closed",
+            "sunHours": "Open for Worship",
+        },
+        "summary": "Named after Lucius Holsey, an African American Bishop who was an essential part of the rich African American history within Sparta.",
+        "description": "Named after Lucius Holsey, an African American Bishop who was an essential part of the rich African American history within Sparta. Holsey was a self-educated former slave, who after gaining his freedom post Civil War preached and lived in Sparta. He dedicated his life the the spiritual and educational advancements of African Americans and founded Paine College. Paine College existed to improve the lives of newly freed slaves through becoming teachers and preachers.",
+        "coordinates": {
+          "latitude": 33.278641,
+          "longitude": -82.964455
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 1034,
+        "title": "Wrightsville Train Depot and Station",
+        "imageName": "",
+        "address": "6745 E College St, Wrightsville, GA 31096",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Main hub of travel and shipping in Johnson County, built in 1900.",
+        "description": "Main hub of travel and shipping in Johnson County, built in 1900. One of the main stops along the Wrightsville-Tennille line. The route had so many bends and turns that caused the railcars to shake, people called it the “Wiggle and Twist.” The line was closed in 1970 and the depot fell into shambles, but the people of Wrightsville restored it into a welcome center and museum. There is a “Wiggle and Twist” Fall Festival every year that commemorates the railroad line. ",
+        "coordinates": {
+          "latitude": 32.728381,
+          "longitude": -82.716292
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1035,
+        "title": "Grice Inn",
+        "imageName": "",
+        "address": "E Elm St, Wrightsville, GA 31096",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Home of the Johnson County Historical Society and built in 1905 by J.R. Grice.",
+        "description": "Home of the Johnson County Historical Society and built in 1905 by J.R. Grice. It eventually became a frequent destination for students and travelers.",
+        "coordinates": {
+          "latitude": 32.729531,
+          "longitude": -82.714608
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1036,
+        "title": "Cornbread Cafe",
+        "imageName": "",
+        "address": "637 E Court St. Wrightsville, GA 31097",
+        "hours": {
+            "monHours": "5:30am - 2:00pm",
+            "tuesHours": "5:30am - 2:00pm",
+            "wedHours": "5:30am - 2:00pm",
+            "thursHours": "5:30am - 2:00pm",
+            "friHours": "5:30am - 2:00pm",
+            "satHours": "5:30am - 2:00pm",
+            "sunHours": "6:30am - 2:00pm",
+        },
+        "summary": "Come to this cafe for a break and order nicely cooked fried chicken.",
+        "description": "Come to this cafe for a break and order nicely cooked fried chicken. Based on the reviewers' opinions, waiters offer tasty biscuits here. Good coffee is the most popular drinks of Cornbread Cafe. This place is well known for its great service and friendly staff, that is always ready to help you. Adequate prices are what you will pay for your meal. Guests who come to this spot state that the atmosphere is cozy here",
+        "coordinates": {
+          "latitude": 32.730549,
+          "longitude": -82.717856
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1037,
+        "title": "Oconee Hill Cementary",
+        "imageName": "",
+        "address": "297 Cemetery St Athens GA 30605",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Oconee Hill Cemetery is nationally recognized as one of the most outstanding examples of Victorian cemeteries in the nation.",
+        "description": "Oconee Hill Cemetery is nationally recognized as one of the most outstanding examples of Victorian cemeteries in the nation. The addition of intricate ironwork and statuary in the 19th century enhanced the cemetery's natural landscape plan. The cemetery was purchased in 1855 by the city of Athens when further burials were prohibited in the old town cemetery on land owned by the University of Georgia. In 1856, the city formed a self-perpetuating Board of Trustees to hold and manage in trust the original purchase of 17 acres on the west side of the North Oconee River as a public cemetery for the benefit of the town. The grassy and rolling terrain with woods, flowing water and scenic vistas makes Oconee Hill a pleasant place to visit and stroll among the graves of many notable Georgians including governors, University presidents, veterans, and Congressmen. Oconee Hill is still an active cemetery, and lots are available for sale. Tours, picnics and outings are allowed with the approval of the cemetery staff.",
+        "coordinates": {
+          "latitude": 33.949593,
+          "longitude": -83.369601
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1038,
+        "title": "Eagle Tavern Museum",
+        "imageName": "",
+        "address": "26 N. Main St. Watkinsville GA 30677",
+        "hours": {
+            "monHours": "10:00am - 4:00pm",
+            "tuesHours": "10:00am - 4:00pm",
+            "wedHours": "10:00am - 4:00pm",
+            "thursHours": "10:00am - 4:00pm",
+            "friHours": "10:00am - 4:00pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "Once a stagecoach stop, the museum tour takes you into the life of traveler in the 1800s.",
+        "description": "Once a stagecoach stop, the museum tour takes you into the life of traveler in the 1800s. Tours began across the street at the Welcome Center. Admission is free, however donations are kindly accepted. The Eagle Tavern Museum is handicap accessible, and restrooms and on-site parking are available.",
+        "coordinates": {
+          "latitude": 33.863927,
+          "longitude": -83.409357
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1039,
+        "title": "Elder Mill Covered Bridge",
+        "imageName": "elder_bridge",
+        "address": " 306 S Main St Greensboro, GA 30642",
+        "hours": {
+            "monHours": "Always Open",
+            "tuesHours": "Always Open",
+            "wedHours": "Always Open",
+            "thursHours": "Always Open",
+            "friHours": "Always Open",
+            "satHours": "Always Open",
+            "sunHours": "Always Open",
+        },
+        "summary": "One of thirteen functioning covered bridges in Georgia, and the only covered bridge along the Georgia Antebellum Trail.",
+        "description": "The Elder Mill Covered Bridge is one of thirteen functioning covered bridges in Georgia, and the only covered bridge along the Georgia Antebellum Trail. The bridge was built in 1897 to span Calls Creek on the Watkinsville-Athens Road. In 1924 the bridge was moved to its current location spanning Rose Creek. The bridge is one of thirteen operational covered bridges in the state of Georgia and was listed on the National Register of Historic Places in 1994.",
+        "coordinates": {
+          "latitude": 33.802994,
+          "longitude": -83.363710
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1040,
+        "title": "Oconee Brewing Company",
+        "imageName": "",
+        "address": "202 N. West St. Greensboro GA 30621",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "4:00pm - 8:00pm",
+            "friHours": "4:00pm - 8:00pm",
+            "satHours": "12:00pm - 8:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Oconee Brewing Company is a craft beer producer housed in a renovated cotton mill warehouse in Greensboro, Georgia, near Lake Oconee.",
+        "description": "Oconee Brewing Company is a craft beer producer housed in a renovated cotton mill warehouse in Greensboro, Georgia, near Lake Oconee. The site includes a retail production facility and a tasting room for public tours.  A 3,600 square foot Event Center includes an 18 foot high, floor to ceiling , glass wall that opens to an outdoor patio.",
+        "coordinates": {
+          "latitude": 33.577768,
+          "longitude": -83.184291
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1041,
+        "title": "Chops and Hops",
+        "imageName": "",
+        "address": "2 South Main Street Suite 112 Watkinsville, Georgia ",
+        "hours": {
+            "monHours": "11:00am - 9:00pm",
+            "tuesHours": "11:00am - 9:00pm",
+            "wedHours": "11:00am - 9:00pm",
+            "thursHours": "11:00am - 9:00pm",
+            "friHours": "11:00am - 10:00pm",
+            "satHours": "11:00am - 10:00pm",
+            "sunHours": "10:00am - 2:00pm",
+        },
+        "summary": "High quality food, wide selection of the best craft beers & a warm, welcoming staff.",
+        "description": "High quality food, wide selection of the best craft beers & a warm, welcoming staff. Also offering a 50 person banquet space for any event. Steaks. Burgers. Seafood. Sandwiches. Craft beer. Handcrafted cocktails. And so, so much more! ",
+        "coordinates": {
+          "latitude": 33.861493,
+          "longitude": -83.407451
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1042,
+        "title": "Oconee River Greenway",
+        "imageName": "",
+        "address": "400 E. Green St. Milledgeville GA 31061",
+        "hours": {
+            "monHours": "7:00am - 8:00pm",
+            "tuesHours": "7:00am - 8:00pm",
+            "wedHours": "7:00am - 8:00pm",
+            "thursHours": "7:00am - 8:00pm",
+            "friHours": "7:00am - 8:00pm",
+            "satHours": "7:00am - 8:00pm",
+            "sunHours": "7:00am - 8:00pm",
+        },
+        "summary": "The Oconee River Greenway Park and Riverwalk offers almost 3 beautiful miles of trails, paths and boardwalks.",
+        "description": "The Oconee River Greenway Park and Riverwalk offers almost 3 beautiful miles of trails, paths and boardwalks to walk, jog, bicycle, and enjoy the beauty and sounds of the Oconee River. Whether you’re taking your furry friend to the dog park or going on a jog with pals, you’re sure to have a pleasant experience with the Oconee River rushing alongside you all the while. Multiple individual fishing stations and a boat ramp are available as well.",
+        "coordinates": {
+          "latitude": 33.081029,
+          "longitude": -83.221531
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1043,
+        "title": "Lake Oconee",
+        "imageName": "",
+        "address": "125 Wallace Dam Rd. Eatonton GA 31024",
+        "hours": {
+            "monHours": "12:00am - 12:00am",
+            "tuesHours": "12:00am - 12:00am",
+            "wedHours": "12:00am - 12:00am",
+            "thursHours": "12:00am - 12:00am",
+            "friHours": "12:00am - 12:00am",
+            "satHours": "12:00am - 12:00am",
+            "sunHours": "12:00am - 12:00am",
+        },
+        "summary": "19,000-acre lake located in Greene, Morgan, Hancock and Putnam counties.",
+        "description": "This 19,000-acre lake located in Greene, Morgan, Hancock and Putnam counties is a prime destination for boating, fishing, golf and various other activities.",
+        "coordinates": {
+          "latitude": 33.345351,
+          "longitude": -83.161673
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1044,
+        "title": "Lake Oconee",
+        "imageName": "",
+        "address": "125 Wallace Dam Rd. Eatonton GA 31024",
+        "hours": {
+            "monHours": "12:00am - 12:00am",
+            "tuesHours": "12:00am - 12:00am",
+            "wedHours": "12:00am - 12:00am",
+            "thursHours": "12:00am - 12:00am",
+            "friHours": "12:00am - 12:00am",
+            "satHours": "12:00am - 12:00am",
+            "sunHours": "12:00am - 12:00am",
+        },
+        "summary": "19,000-acre lake located in Greene, Morgan, Hancock and Putnam counties.",
+        "description": "This 19,000-acre lake located in Greene, Morgan, Hancock and Putnam counties is a prime destination for boating, fishing, golf and various other activities.",
+        "coordinates": {
+          "latitude": 33.345351,
+          "longitude": -83.161673
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1045,
+        "title": "Oconee Heritage Park",
+        "imageName": "heritage_park",
+        "address": "2543 Macon Hwy. Watkinsville GA 30677",
         "hours": {
             "monHours": "Always Open",
             "tuesHours": "Always Open",
@@ -146,39 +1218,13 @@
         "summary": "Heritage Park is 364 acres of attractive park setting with woods, creeks, and the Appalachee River.",
         "description": "Heritage Park is 364 acres of attractive park setting with woods, creeks, and the Appalachee River. The park is a quiet place to take a relaxing walk on the 2.5 miles of walking trails, a challenging bike excursion on the 9.5 miles of bike trails, a scenic ride on the 4.5 miles of equestrian trails, and a family picnic or just a place to breathe in fresh country air.",
         "coordinates": {
-          "latitude": 33.441376,
-          "longitude": -84.120407
+          "latitude": 33.760953,
+          "longitude": -83.443737
         },
         "category": "Nature",
         "favorite": false,
         "isShowing": false,
-        "hasHours": true
-    },
-    
-    {
-        "id": 1007,
-        "title": "Okefenokee Swamp",
-        "imageName": "okefenokee_swamp",
-        "address": " 306 S Main St Greensboro, GA 30642",
-        "hours": {
-            "monHours": "Always Open",
-            "tuesHours": "Always Open",
-            "wedHours": "Always Open",
-            "thursHours": "Always Open",
-            "friHours": "Always Open",
-            "satHours": "Always Open",
-            "sunHours": "Always Open",
-        },
-        "summary": "The Okefenokee Swamp is a shallow, 438,000-acre, peat-filled wetland straddling the Georgia–Florida line in the United States.",
-        "description": "The Okefenokee Swamp is a shallow, 438,000-acre, peat-filled wetland straddling the Georgia–Florida line in the United States. A majority of the swamp is protected by the Okefenokee National Wildlife Refuge and the Okefenokee Wilderness.",
-        "coordinates": {
-          "latitude": 31.056348,
-          "longitude": -82.271735
-        },
-        "category": "Nature",
-        "favorite": false,
-        "isShowing": false,
-        "hasHours": true
+        "hasHours": false
     },
     
     

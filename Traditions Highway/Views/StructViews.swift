@@ -101,11 +101,11 @@ struct CardView: View {
             
             VStack(alignment: .leading) {
                 Text(route.title)
-                    .font(.custom("Nexa Bold", size: 17))
+                    .font(.custom("Nexa Bold", size: 16))
                     .foregroundColor(.black)
                 HStack {
                     Text(route.summary)
-                        .font(.custom("Frontis-Light", size: 14))
+                        .font(.custom("Frontis-Light", size: 13))
                         .foregroundColor(.black )
                         .padding(.top, 8)
                         .multilineTextAlignment(.leading)
