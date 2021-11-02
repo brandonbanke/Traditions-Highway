@@ -2,7 +2,7 @@
     {
         "id": 1001,
         "title": "Appling County Heritage Center",
-        "imageName": "goodwin_manor",
+        "imageName": "appling-heritage",
         "address": "209 Thomas St. Baxley GA 31513",
         "hours": {
             "monHours": "Closed",
@@ -28,7 +28,7 @@
     {
         "id": 1002,
         "title": "Bank of Surrency",
-        "imageName": "goodwin_manor",
+        "imageName": "bank-surrency",
         "address": "80 Hart St., Surrency, Georgia",
         "hours": {
             "monHours": "Closed",
@@ -54,7 +54,7 @@
     {
         "id": 1003,
         "title": "Sips and Such Cafe",
-        "imageName": "goodwin_manor",
+        "imageName": "sips-such",
         "address": "489 North Blvd, Baxley, GA 31513",
         "hours": {
             "monHours": "6:45am - 5:30pm",
@@ -80,7 +80,7 @@
     {
         "id": 1004,
         "title": "K & L Barbecue",
-        "imageName": "goodwin_manor",
+        "imageName": "kl-bbq",
         "address": "56 Luckie Street Baxley, GA 31513",
         "hours": {
             "monHours": "10:30am - 8:00pm",
@@ -106,7 +106,7 @@
     {
         "id": 1005,
         "title": "Hardware 341 Grill",
-        "imageName": "goodwin_manor",
+        "imageName": "hardware-grill",
         "address": "118 Azalea Rd. Ste 6 Baxley GA 31513",
         "hours": {
             "monHours": "10:30am - 8:00pm",
@@ -132,7 +132,7 @@
     {
         "id": 1006,
         "title": "Dick’s Wings and Grill",
-        "imageName": "goodwin_manor",
+        "imageName": "dicks-wings",
         "address": "895 South Main Street Baxley GA 31513",
         "hours": {
             "monHours": "11:00am-9:00pm",
@@ -158,7 +158,7 @@
     {
         "id": 1007,
         "title": "Deen's Landing",
-        "imageName": "goodwin_manor",
+        "imageName": "deens-landing",
         "address": "Old River Rd. Baxley, GA 31513",
         "hours": {
             "monHours": "24 Hours",
@@ -184,7 +184,7 @@
     {
         "id": 1008,
         "title": "Moody Forest",
-        "imageName": "",
+        "imageName": "moody-forest",
         "address": "Baxley, GA 31513 United States",
         "hours": {
             "monHours": "",
@@ -210,7 +210,7 @@
     {
         "id": 1009,
         "title": "Altamaha River Bioreserve",
-        "imageName": "",
+        "imageName": "altamaha-river",
         "address": "1605 Altamaha Park Rd Brunswick, GA 31525 United States",
         "hours": {
             "monHours": "",
@@ -249,7 +249,7 @@
     {
         "id": 1010,
         "title": "Railroad Transportation Museum",
-        "imageName": "",
+        "imageName": "railroad-museum",
         "address": "3795 Main St. Folkston, GA 31537",
         "hours": {
             "monHours": "9:00am - 5:00pm",
@@ -275,7 +275,7 @@
     {
         "id": 1011,
         "title": "Chesser Island Homestead",
-        "imageName": "",
+        "imageName": "chesser-homestead",
         "address": "2700 North Suwannee Canal Road Folkston, GA 31537",
         "hours": {
             "monHours": "",
@@ -301,7 +301,7 @@
     {
         "id": 1012,
         "title": "Whistlin’ Dixie",
-        "imageName": "",
+        "imageName": "whistlin-dixie",
         "address": "3742 W Main St, Folkston, GA 31537",
         "hours": {
             "monHours": "9:00am – 3:00pm",
@@ -327,7 +327,7 @@
     {
         "id": 1013,
         "title": "Okefenokee National Wildlife Refuge",
-        "imageName": "",
+        "imageName": "okefenokee-refuge",
         "address": "2700 Suwannee Canal Rd. Folkston GA 31537",
         "hours": {
             "monHours": "7:00am - 7:30pm",
@@ -353,7 +353,7 @@
     {
         "id": 1014,
         "title": "Folkston Funnel",
-        "imageName": "",
+        "imageName": "folkston-funnel",
         "address": "16 Oakwood Street Folkston, GA 31537",
         "hours": {
             "monHours": "24 Hours",
@@ -396,7 +396,7 @@
     {
         "id": 1015,
         "title": "Historic Springfield Baptist Church",
-        "imageName": "",
+        "imageName": "springfield-baptist",
         "address": "246-298 E Second St Greensboro, GA 30642",
         "hours": {
             "monHours": "Closed",
@@ -421,8 +421,8 @@
     
     {
         "id": 1016,
-        "title": "Old Gao",
-        "imageName": "",
+        "title": "Old Gaol",
+        "imageName": "old-gaol",
         "address": "E. Greene St. Greensboro, GA 30642",
         "hours": {
             "monHours": "",
@@ -448,7 +448,7 @@
     {
         "id": 1017,
         "title": "Holcomb’s Bar-B-Que",
-        "imageName": "holcomb_bbq",
+        "imageName": "holcomb-bbq",
         "address": " 306 S Main St Greensboro, GA 30642",
         "hours": {
             "monHours": "Always Open",
@@ -474,7 +474,7 @@
     {
         "id": 1018,
         "title": "National Tavern at Reynolds Lake Oconee",
-        "imageName": "",
+        "imageName": "reynolds-tavern",
         "address": "1145 National Dr, Greensboro, GA 30642, USA",
         "hours": {
             "monHours": "Closed",
@@ -500,7 +500,7 @@
     {
         "id": 1019,
         "title": "Courson’s Winery",
-        "imageName": "courson_winery",
+        "imageName": "courson-winery",
         "address": " 306 S Main St Greensboro, GA 30642",
         "hours": {
             "monHours": "Always Open",
@@ -526,7 +526,7 @@
     {
         "id": 1020,
         "title": "Oconee Brewing Company",
-        "imageName": "",
+        "imageName": "oconee-brewing",
         "address": "202 N West St. Greensboro, GA 30642",
         "hours": {
             "monHours": "Closed",
@@ -552,7 +552,7 @@
     {
         "id": 1021,
         "title": "Ripe Thing Market",
-        "imageName": "",
+        "imageName": "ripe-thing",
         "address": "112 West Broad Street, Greensboro, GA 30642, USA",
         "hours": {
             "monHours": "10:00am - 6:00pm",
@@ -577,34 +577,8 @@
     
     {
         "id": 1022,
-        "title": "Courson’s Winery",
-        "imageName": "courson_winery",
-        "address": " 306 S Main St Greensboro, GA 30642",
-        "hours": {
-            "monHours": "Always Open",
-            "tuesHours": "Always Open",
-            "wedHours": "Always Open",
-            "thursHours": "Always Open",
-            "friHours": "Always Open",
-            "satHours": "Always Open",
-            "sunHours": "Always Open",
-        },
-        "summary": "Courson's Winery is situated 10 miles from downtown Sparta and boasts 14 different traditional Southern wines.",
-        "description": "Courson's Winery is situated 10 miles from downtown Sparta and boasts 14 different traditional Southern wines. Starting a new tradition, Courson's held its inaugural wine festival in 2004, which drew more than 1,500 connoisseurs. Open every day, enthusiasts and novices alike are invited to experience the ambiance and sweet tastes of Courson's Winery. Courson makes the kind of Southern table wine his great-grandfather made, using muscadines, scuppernongs, peaches, apples, plums, blackberries and blueberries. He captures the feel of a homemade wine with his lighter, fruitier, sweeter wines.",
-        "coordinates": {
-          "latitude": 33.179291,
-          "longitude": -83.077120
-        },
-        "category": "Dining",
-        "favorite": false,
-        "isShowing": false,
-        "hasHours": true
-    },
-    
-    {
-        "id": 1023,
         "title": "Okefenokee Swamp",
-        "imageName": "okefenokee_swamp",
+        "imageName": "okefenokee-swamp",
         "address": " 306 S Main St Greensboro, GA 30642",
         "hours": {
             "monHours": "Always Open",
@@ -628,9 +602,9 @@
     },
     
     {
-        "id": 1024,
+        "id": 1023,
         "title": "Oconee Joe",
-        "imageName": "oconee_joe",
+        "imageName": "oconee-joe",
         "address": " 306 S Main St Greensboro, GA 30642",
         "hours": {
             "monHours": "Always Open",
@@ -655,9 +629,9 @@
 
     
     {
-        "id": 1025,
+        "id": 1024,
         "title": "Old Salem Park",
-        "imageName": "",
+        "imageName": "salem-park",
         "address": "Old Salem Campground 1530 Old Salem Rd, Greensboro, GA 30642, USA",
         "hours": {
             "monHours": "",
@@ -681,9 +655,9 @@
     },
     
     {
-        "id": 1026,
+        "id": 1025,
         "title": "Park Ferry Campground",
-        "imageName": "",
+        "imageName": "parks-ferry",
         "address": "1491 Parks Mill Rd. Greensboro GA 30642",
         "hours": {
             "monHours": "",
@@ -707,9 +681,9 @@
     },
     
     {
-        "id": 1027,
+        "id": 1026,
         "title": "Redlands Wildlife Management Area",
-        "imageName": "",
+        "imageName": "redlands-wildlife",
         "address": "Athens Highway Greensboro, GA 30642",
         "hours": {
             "monHours": "",
@@ -733,9 +707,9 @@
     },
     
     {
-        "id": 1028,
+        "id": 1027,
         "title": "Highgate Estate & Gardens",
-        "imageName": "",
+        "imageName": "highgate",
         "address": "301 W. Greene St. Greensboro, GA 30642",
         "hours": {
             "monHours": "",
@@ -759,9 +733,9 @@
     },
     
     {
-        "id": 1029,
+        "id": 1028,
         "title": "The Preserve Golf Course at Reynolds Lake",
-        "imageName": "",
+        "imageName": "preserve-golf",
         "address": "1091 Clubhouse Ln, Greensboro, GA 30642",
         "hours": {
             "monHours": "7:30am - 7:00pm",
@@ -785,9 +759,9 @@
     },
     
     {
-        "id": 1030,
+        "id": 1029,
         "title": "Greensboro Antique Mall",
-        "imageName": "",
+        "imageName": "antique-mall",
         "address": "101 S Main Street Greensboro, GA 30642",
         "hours": {
             "monHours": "10:00am - 5:30pm",
@@ -811,9 +785,9 @@
     },
     
     {
-        "id": 1031,
+        "id": 1030,
         "title": "Goodwin Manor",
-        "imageName": "goodwin_manor",
+        "imageName": "goodwin-manor",
         "address": " 306 S Main St Greensboro, GA 30642",
         "hours": {
             "monHours": "24 Hours",
@@ -837,9 +811,9 @@
     },
     
     {
-        "id": 1032,
+        "id": 1031,
         "title": "Genuine Georgia",
-        "imageName": "",
+        "imageName": "genuine-georgia",
         "address": "102 South Main Street, Greensboro, GA 30642",
         "hours": {
             "monHours": "10:00am - 5:00pm",
@@ -876,9 +850,9 @@
     
     
     {
-        "id": 1033,
+        "id": 1032,
         "title": "Holsey Memorial CME Church",
-        "imageName": "",
+        "imageName": "holsey-memorial",
         "address": "187 Ghettis St, Sparta, GA 31087",
         "hours": {
             "monHours": "Closed",
@@ -916,9 +890,9 @@
     
     
     {
-        "id": 1034,
+        "id": 1033,
         "title": "Wrightsville Train Depot and Station",
-        "imageName": "",
+        "imageName": "wrightsville-depot",
         "address": "6745 E College St, Wrightsville, GA 31096",
         "hours": {
             "monHours": "",
@@ -942,9 +916,9 @@
     },
     
     {
-        "id": 1035,
+        "id": 1034,
         "title": "Grice Inn",
-        "imageName": "",
+        "imageName": "grice-inn",
         "address": "E Elm St, Wrightsville, GA 31096",
         "hours": {
             "monHours": "",
@@ -968,9 +942,9 @@
     },
     
     {
-        "id": 1036,
+        "id": 1035,
         "title": "Cornbread Cafe",
-        "imageName": "",
+        "imageName": "cornbread-cafe",
         "address": "637 E Court St. Wrightsville, GA 31097",
         "hours": {
             "monHours": "5:30am - 2:00pm",
@@ -994,9 +968,9 @@
     },
     
     {
-        "id": 1037,
+        "id": 1036,
         "title": "Oconee Hill Cementary",
-        "imageName": "",
+        "imageName": "oconee-cemetary",
         "address": "297 Cemetery St Athens GA 30605",
         "hours": {
             "monHours": "",
@@ -1020,9 +994,9 @@
     },
     
     {
-        "id": 1038,
+        "id": 1037,
         "title": "Eagle Tavern Museum",
-        "imageName": "",
+        "imageName": "eagle-tavern",
         "address": "26 N. Main St. Watkinsville GA 30677",
         "hours": {
             "monHours": "10:00am - 4:00pm",
@@ -1046,9 +1020,9 @@
     },
     
     {
-        "id": 1039,
+        "id": 1038,
         "title": "Elder Mill Covered Bridge",
-        "imageName": "elder_bridge",
+        "imageName": "elder-bridge",
         "address": " 306 S Main St Greensboro, GA 30642",
         "hours": {
             "monHours": "Always Open",
@@ -1070,37 +1044,12 @@
         "isShowing": false,
         "hasHours": false
     },
+
     
     {
-        "id": 1040,
-        "title": "Oconee Brewing Company",
-        "imageName": "",
-        "address": "202 N. West St. Greensboro GA 30621",
-        "hours": {
-            "monHours": "Closed",
-            "tuesHours": "Closed",
-            "wedHours": "Closed",
-            "thursHours": "4:00pm - 8:00pm",
-            "friHours": "4:00pm - 8:00pm",
-            "satHours": "12:00pm - 8:00pm",
-            "sunHours": "Closed",
-        },
-        "summary": "Oconee Brewing Company is a craft beer producer housed in a renovated cotton mill warehouse in Greensboro, Georgia, near Lake Oconee.",
-        "description": "Oconee Brewing Company is a craft beer producer housed in a renovated cotton mill warehouse in Greensboro, Georgia, near Lake Oconee. The site includes a retail production facility and a tasting room for public tours.  A 3,600 square foot Event Center includes an 18 foot high, floor to ceiling , glass wall that opens to an outdoor patio.",
-        "coordinates": {
-          "latitude": 33.577768,
-          "longitude": -83.184291
-        },
-        "category": "Dining",
-        "favorite": false,
-        "isShowing": false,
-        "hasHours": true
-    },
-    
-    {
-        "id": 1041,
+        "id": 1039,
         "title": "Chops and Hops",
-        "imageName": "",
+        "imageName": "chops-hops",
         "address": "2 South Main Street Suite 112 Watkinsville, Georgia ",
         "hours": {
             "monHours": "11:00am - 9:00pm",
@@ -1124,9 +1073,9 @@
     },
     
     {
-        "id": 1042,
+        "id": 1040,
         "title": "Oconee River Greenway",
-        "imageName": "",
+        "imageName": "oconee-greenway",
         "address": "400 E. Green St. Milledgeville GA 31061",
         "hours": {
             "monHours": "7:00am - 8:00pm",
@@ -1150,9 +1099,9 @@
     },
     
     {
-        "id": 1043,
+        "id": 1041,
         "title": "Lake Oconee",
-        "imageName": "",
+        "imageName": "lake-oconee",
         "address": "125 Wallace Dam Rd. Eatonton GA 31024",
         "hours": {
             "monHours": "12:00am - 12:00am",
@@ -1176,35 +1125,9 @@
     },
     
     {
-        "id": 1044,
-        "title": "Lake Oconee",
-        "imageName": "",
-        "address": "125 Wallace Dam Rd. Eatonton GA 31024",
-        "hours": {
-            "monHours": "12:00am - 12:00am",
-            "tuesHours": "12:00am - 12:00am",
-            "wedHours": "12:00am - 12:00am",
-            "thursHours": "12:00am - 12:00am",
-            "friHours": "12:00am - 12:00am",
-            "satHours": "12:00am - 12:00am",
-            "sunHours": "12:00am - 12:00am",
-        },
-        "summary": "19,000-acre lake located in Greene, Morgan, Hancock and Putnam counties.",
-        "description": "This 19,000-acre lake located in Greene, Morgan, Hancock and Putnam counties is a prime destination for boating, fishing, golf and various other activities.",
-        "coordinates": {
-          "latitude": 33.345351,
-          "longitude": -83.161673
-        },
-        "category": "Nature",
-        "favorite": false,
-        "isShowing": false,
-        "hasHours": true
-    },
-    
-    {
-        "id": 1045,
+        "id": 1042,
         "title": "Oconee Heritage Park",
-        "imageName": "heritage_park",
+        "imageName": "heritage-park",
         "address": "2543 Macon Hwy. Watkinsville GA 30677",
         "hours": {
             "monHours": "Always Open",
