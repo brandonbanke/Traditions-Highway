@@ -423,7 +423,7 @@
         "id": 1016,
         "title": "Old Gaol",
         "imageName": "old-gaol",
-        "address": "E. Greene St. Greensboro, GA 30642",
+        "address": "N East St, Greensboro, GA 30642",
         "hours": {
             "monHours": "",
             "tuesHours": "",
@@ -436,8 +436,8 @@
         "summary": "Built of granite from a local quarry, the walls are 2 feet thick. It is the oldest standing masonry jail in Georgia.",
         "description": "In 1807, the Superior Court of Greene County recommended that a substantial jail be built. The \"rock gaol\" is the product of that request. Built of granite from a local quarry, the walls are 2 feet thick. It is the oldest standing masonry jail in Georgia.",
         "coordinates": {
-          "latitude": 33.568512,
-          "longitude": -83.177729
+          "latitude": 33.587199,
+          "longitude": -83.168386
         },
         "category": "History",
         "favorite": false,
@@ -904,7 +904,7 @@
             "sunHours": "",
         },
         "summary": "Main hub of travel and shipping in Johnson County, built in 1900.",
-        "description": "Main hub of travel and shipping in Johnson County, built in 1900. One of the main stops along the Wrightsville-Tennille line. The route had so many bends and turns that caused the railcars to shake, people called it the “Wiggle and Twist.” The line was closed in 1970 and the depot fell into shambles, but the people of Wrightsville restored it into a welcome center and museum. There is a “Wiggle and Twist” Fall Festival every year that commemorates the railroad line. ",
+        "description": "Main hub of travel and shipping in Johnson County, built in 1900. One of the main stops along the Wrightsville-Tennille line. The route had so many bends and turns that caused the railcars to shake, people called it the “Wiggle and Twist.” The line was closed in 1970 and the depot fell into shambles, but the people of Wrightsville restored it into a welcome center and museum. There is a “Wiggle and Twist” Fall Festival every year that commemorates the railroad line.",
         "coordinates": {
           "latitude": 32.728381,
           "longitude": -82.716292
@@ -1150,8 +1150,774 @@
         "hasHours": false
     },
     
+    {
+        "id": 1043,
+        "title": "Oconee Cultural Arts Foundation",
+        "imageName": "ocaf",
+        "address": "34 School St. Watkinsville GA 30677",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "10:00am - 4:00pm",
+            "wedHours": "10:00am - 4:00pm",
+            "thursHours": "10:00am - 4:00pm",
+            "friHours": "10:00am - 4:00pm",
+            "satHours": "10:00am - 4:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Oconee Cultural Art Foundation is an art gallery that showcases a variety of national art exhibitions.",
+        "description": "Oconee Cultural Art Foundation is an art gallery that showcases a variety of local, regional, and national art exhibitions throughout the year, including the largest pottery show in the state. Come view exhibits, take art classes, and peek into their artists’ studio.",
+        "coordinates": {
+          "latitude": 33.864373,
+          "longitude": -83.405792
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1044,
+        "title": "Oconee Outfitters",
+        "imageName": "oconee-outfitters",
+        "address": "110 North Wayne Street Milledgeville GA 31061",
+        "hours": {
+            "monHours": "10:00am - 6:00pm",
+            "tuesHours": "10:00am - 6:00pm",
+            "wedHours": "10:00am - 6:00pm",
+            "thursHours": "10:00am - 6:00pm",
+            "friHours": "10:00am - 6:00pm",
+            "satHours": "10:00am - 6:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Oconee Outfitters is your one stop shop to go outside and play.",
+        "description": "Oconee Outfitters is your one stop shop to go outside and play. The shop provides quality bicycles, kayaks, and stand up paddle boards, bicycle repair service, kayak, bike, and SUP rentals, and a variety of outdoor gear in the heart of downtown Milledgeville.",
+        "coordinates": {
+          "latitude": 33.081649,
+          "longitude": -83.227494
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1045,
+        "title": "Classic City Clydesdales",
+        "imageName": "clydesdales",
+        "address": "4190 Price Mill Road Bishop GA 30621",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "11:00am - 1:00pm",
+            "thursHours": "Closed",
+            "friHours": "11:00am - 1:00pm",
+            "satHours": "11:00am - 1:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "A rare attraction to the South, the Classic City Clydesdale Farm offers tours in which visitors can get up close and personal with a larger-than-life Clydesdale horse.",
+        "description": "A rare attraction to the South, the Classic City Clydesdale Farm offers tours in which visitors can get up close and personal with a larger-than-life Clydesdale horse. The farm is open to the public for farm tours  Wednesday, Friday, and Saturday at 11:00 a.m. and 1:00 p.m., and by appointment for trail rides (4 person max and a 24-hour notice). For a motorcoach group tour, contact the Welcome Center.",
+        "coordinates": {
+          "latitude": 33.790449,
+          "longitude": -83.465040
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1046,
+        "title": "Washington Farms",
+        "imageName": "washington-farms",
+        "address": "5671 Hog Mountain Rd, Bogart, GA 30622",
+        "hours": {
+            "monHours": "8:00am - 2:00pm",
+            "tuesHours": "8:00am - 2:00pm",
+            "wedHours": "8:00am - 2:00pm",
+            "thursHours": "8:00am - 2:00pm",
+            "friHours": "8:00am - 2:00pm",
+            "satHours": "8:00am - 2:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Washington Farms is the place you can pick your own strawberries, blackberries, and blueberries in the summer, and pumpkins in the fall.",
+        "description": "Washington Farms is the place you can pick your own strawberries, blackberries, and blueberries in the summer, and pumpkins in the fall. Your family can also enjoy the farm’s activities such as a petting zoo, corn maze, wagon rides, paintball gallery, inflatables, and more during Super Spring Saturdays and Fall Farm Fun.",
+        "coordinates": {
+          "latitude": 33.880496,
+          "longitude": -83.547098
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 1047,
+        "title": "The Perfect Scoop",
+        "imageName": "perfect-scoop",
+        "address": "107 Main St NW Vidalia, GA 30474",
+        "hours": {
+            "monHours": "11:00am - 6:00pm",
+            "tuesHours": "11:00am - 6:00pm",
+            "wedHours": "11:00am - 6:00pm",
+            "thursHours": "11:00am - 6:00pm",
+            "friHours": "11:00am - 6:00pm",
+            "satHours": "11:00am - 6:00pm",
+            "sunHours": "11:00am - 6:00pm",
+        },
+        "summary": "Old-fashioned retro ice cream shop!",
+        "description": "Old-fashioned retro ice cream shop featuring milkshakes, fountain soda, malts, floats, sundaes, banana splits, hard serve ice cream and lunch menu.",
+        "coordinates": {
+          "latitude": 32.219472,
+          "longitude": -82.412525
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1048,
+        "title": "Papa Bucks",
+        "imageName": "papa-bucks",
+        "address": "1500 E 1st St Vidalia, GA 30474",
+        "hours": {
+            "monHours": "11:00am - 8:00pm",
+            "tuesHours": "11:00am - 8:00pm",
+            "wedHours": "11:00am - 8:00pm",
+            "thursHours": "11:00am - 8:00pm",
+            "friHours": "11:00am - 8:00pm",
+            "satHours": "11:00am - 8:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Papa Buck's BBQ is the right place for \"deee-licious\" barbeque, beef brisket, ribs, chicken and more!",
+        "description": "Papa Bucks BBQ was created in 2007 as a mobile food truck in Twin City Georgia. Later, we started selling BBQ to students at Georgia Southern University. After much success, we then decided to open a restaurant in Metter, Georgia. Over the years, we have grown and continue to cook mouth-watering Smoked Q to our customers just like we did the very first day. Our business has grown, but we keep tradition and taste consistent by using a secret family recipe of the one and only Papa Buck who is the owner’s great grandfather.",
+        "coordinates": {
+          "latitude": 32.211960,
+          "longitude": -82.394434
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1049,
+        "title": "Steeplechase Grill and Tavern",
+        "imageName": "steeplechase",
+        "address": "306 E 2nd St, Vidalia, GA 30474",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "4:30pm - 9:00pm",
+            "wedHours": "4:30pm - 9:00pm",
+            "thursHours": "4:30pm - 9:00pm",
+            "friHours": "4:30pm - 9:30pm",
+            "satHours": "5:00pm - 9:30pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Classic American fare, from sandwiches to steaks, is served in a relaxed, warm-hued setting.",
+        "description": "Classic American fare, from sandwiches to steaks, is served in a relaxed, warm-hued setting. Steeplechase first opened its doors in Vidalia, GA in 1996. Owned and operated by a veteran restauranteur with over 30 years of experience, Steeplechase boasts the most original and delicious food around. Nothing pre-packaged! No shortcuts!",
+        "coordinates": {
+          "latitude": 32.214980,
+          "longitude": -82.409691
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1050,
+        "title": "Downtown Vidalia Association",
+        "imageName": "vidalia-association",
+        "address": "128 Church St, Vidalia, GA 30474",
+        "hours": {
+            "monHours": "8:30am  - 5:00pm",
+            "tuesHours": "8:30am  - 5:00pm",
+            "wedHours": "8:30am  - 5:00pm",
+            "thursHours": "8:30am  - 5:00pm",
+            "friHours": "8:30am  - 5:00pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "Historic Main Street is the center of community activity where everyone feels connected.",
+        "description": "Historic Main Street is the center of community activity where everyone feels connected.  People who live, work and visit here appreciate its rich heritage, delight in its places of business and feel the heartbeat of Vidalia-Toombs County's future.",
+        "coordinates": {
+          "latitude": 32.217612,
+          "longitude": -82.412874
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1051,
+        "title": "Vidalia Onion Museum",
+        "imageName": "onion-museum",
+        "address": "100 Vidalia Sweet Onion Dr, Vidalia, GA 30474",
+        "hours": {
+            "monHours": "9:00am  - 5:00pm",
+            "tuesHours": "9:00am  - 5:00pm",
+            "wedHours": "9:00am  - 5:00pm",
+            "thursHours": "9:00am  - 5:00pm",
+            "friHours": "9:00am  - 5:00pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "The Vidalia Onion Museum provides guests with a sweet historical experience.",
+        "description": "Discover the story behind the Vidalia Sweet Onion! The Vidalia Onion Museum provides guests with a sweet historical experience. The 1,300-square-foot space is filled with an array of educational exhibits that highlight the sweet onion's economic, cultural and culinary significance. Learn more about the sweet onion, the growers and how the Vidalia Onion continues to draw national and international recognition. Bring the kid's to meet Yumion, the colorful mascot, and visit the kid's room to grade onions. In season,  everyone will enjoy seeing the real thing growing in front of the museum.",
+        "coordinates": {
+          "latitude": 32.204141,
+          "longitude": -82.370052
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1052,
+        "title": "Altama Museum of Art and History",
+        "imageName": "altama-museum",
+        "address": "611 Jackson St, Vidalia, GA 30474",
+        "hours": {
+            "monHours": "10:00am - 2:00pm",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "10:00am - 2:00pm",
+            "friHours": "10:00am - 2:00pm",
+            "satHours": "10:00am - 2:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "The Altama Museum of Art & History endeavors to promote artistic expression.",
+        "description": "The Altama Museum of Art & History endeavors to promote artistic expression, preserve regional history, and provide discovery and educational opportunity to strengthen and inspire our community.",
+        "coordinates": {
+          "latitude": 32.211568,
+          "longitude": -82.415372
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    {
+        "id": 1054,
+        "title": "Baker’s BBQ",
+        "imageName": "bakers-bbq",
+        "address": "1009 Second Street Suite A Soperton, GA 30457",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "11:00 am – 8:00pm",
+            "friHours": "11:00 am – 8:00pm",
+            "satHours": "11:00 am – 8:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Baker's Barbecue is Serving and Saucing all of Georgia.",
+        "description": "Baker's Barbecue is Serving and Saucing all of Georgia. A local bbq place that also caters all over Georgia and has local artists perform at their Soperton location.",
+        "coordinates": {
+          "latitude": 32.3818,
+          "longitude": -82.5895
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1055,
+        "title": "Boneyard BBQ",
+        "imageName": "boneyard-bbq",
+        "address": "4100 W Railroad Ave, Soperton, GA 30457",
+        "hours": {
+            "monHours": "11:00am - 8:00pm",
+            "tuesHours": "11:00am - 8:00pm",
+            "wedHours": "11:00am - 8:00pm",
+            "thursHours": "11:00am - 8:00pm",
+            "friHours": "11:00am - 8:00pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "Bbq restaurant in Soperton & additional new location in Reidsville.",
+        "description": "Good fresh daily cooked BBQ, Chicken, Ribs and Brisket along with sandwiches, salads and much more come see us. We're Not Fancy Just Good. Won “Best BBQ” & “Best Restaurant” in Best of Tattnall 2020.",
+        "coordinates": {
+          "latitude": 32.3793,
+          "longitude": -82.5920
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1056,
+        "title": "The Windmill Restaurant",
+        "imageName": "windmill",
+        "address": "375 Main St, Tarrytown, GA 30470",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "Closed",
+            "friHours": "Closed",
+            "satHours": "5:00pm - 9:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Offers a wide variety of southern foods and desserts in a cute little house.",
+        "description": "Offers a wide variety of southern foods and desserts in a cute little house. Can also cater their food for events; is only open on Saturdays, which makes it unique and everyone waits in line for the good food.",
+        "coordinates": {
+          "latitude": 32.3185,
+          "longitude": -82.5599
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1057,
+        "title": "Little Ocmulgee State Park",
+        "imageName": "little-state-park",
+        "address": "80 Live Oak Trail, McRae, McRae-Helena, GA 31037",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Guests enjoy sun-soaked days swimming in the private pool, gathering within a picnic shelter and enjoying the 265-acre Little Ocmulgee Lake through swimming, boating or fishing.",
+        "description": "Guests enjoy sun-soaked days swimming in the private pool, gathering within a picnic shelter and enjoying the 265-acre Little Ocmulgee Lake through swimming, boating or fishing. Golfers are challenged by the acclaimed Wallace Adams Golf Course, recognized as one of the best public courses in the South. Comfortable, modern accommodations in the Lodge along with fully equipped lakeside cabins provide a restful and rejuvenating experience. There are also complete camping facilities for tent or RV camping. The Fairway Grill, a full-service restaurant serving traditional Southern meals, overlooks the sixth and seventh holes of the golf course.",
+        "coordinates": {
+          "latitude": 31.9048,
+          "longitude": -82.5738
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1058,
+        "title": "Palm Beach Island",
+        "imageName": "palm-beach",
+        "address": "2970 GA-56 S, Swainsboro, GA 30401",
+        "hours": {
+            "monHours": "10:00am - 6:00pm (April - August)",
+            "tuesHours": "10:00am - 6:00pm (April - August)",
+            "wedHours": "10:00am - 6:00pm (April - August)",
+            "thursHours": "10:00am - 6:00pm (April - August)",
+            "friHours": "10:00am - 6:00pm (April - August)",
+            "satHours": "10:00am - 6:00pm (April - August)",
+            "sunHours": "10:00am - 6:00pm (April - August)",
+        },
+        "summary": "A manmade beach/lake with picnic tables and a slide.",
+        "description": "A manmade beach/lake with picnic tables and a slide. A unique park - definitely a hidden gem.",
+        "coordinates": {
+          "latitude": 32.4764,
+          "longitude": -82.4475
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1059,
+        "title": "The Shabulous Boutique",
+        "imageName": "shabulous",
+        "address": "4033 E Main St, Soperton, GA 30457",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "10:00am - 6:00pm",
+            "wedHours": "10:00am - 6:00pm",
+            "thursHours": "10:00am - 6:00pm",
+            "friHours": "10:00am - 6:00pm",
+            "satHours": "10:00am - 4:30pm",
+            "sunHours": "Closed",
+        },
+        "summary": "A women’s boutique with cutesy clothes for all ages and sizes.",
+        "description": "A women’s boutique with cutesy clothes for all ages and sizes. Not a chain store - but locally owned with the goal to help people feel good by looking good.",
+        "coordinates": {
+          "latitude": 32.377234,
+          "longitude": -82.591909
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1060,
+        "title": "Higgs Florist",
+        "imageName": "higgs-florist",
+        "address": "4235 W Main St, Soperton, GA 30457",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Higgs Florist has flowers for all occasions.",
+        "description": "Higgs Florist has flowers for all occasions. Higgs is a local family owned business. The family also owns the town’s funeral home.",
+        "coordinates": {
+          "latitude": 32.3799,
+          "longitude": -82.5946
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 1061,
+        "title": "Brown House Museum",
+        "imageName": "brown-house",
+        "address": "268 N. Harris St. Sandersville, GA 31082",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "2:00pm - 5:00pm",
+            "wedHours": "Closed",
+            "thursHours": "2:00pm - 5:00pm",
+            "friHours": "2:00pm - 5:00pm",
+            "satHours": "10:00am - 3:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "General Sherman headquartered here in 1864 while on his infamous March to the Sea.",
+        "description": "General Sherman headquartered here in 1864 while on his infamous March to the Sea. He napped here, dined with the family and held staff meetings. Displayed is an enlarged exhibit of Civil War items. Some items are unique and usually not seen in a museum. Personal articles, letters written home by soldiers and other significant Civil War items can be seen.",
+        "coordinates": {
+          "latitude": 32.9884,
+          "longitude": -82.8100
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1062,
+        "title": "Warthen Old Jail",
+        "imageName": "warthen-jail",
+        "address": "7616 Hwy. 15 N. Warthen GA 31094",
+        "hours": {
+            "monHours": "9:00am - 5:00pm",
+            "tuesHours": "9:00am - 5:00pm",
+            "wedHours": "9:00am - 5:00pm",
+            "thursHours": "9:00am - 5:00pm",
+            "friHours": "9:00am - 5:00pm",
+            "satHours": "Closed",
+            "sunHours": "Closed",
+        },
+        "summary": "Oldest wooden jail in Georgia.",
+        "description": "Oldest wooden jail in Georgia. Aaron Burr was kept here & it’s listed on the National Register of Historic Places.",
+        "coordinates": {
+          "latitude": 33.1001,
+          "longitude": -82.8051
+        },
+        "category": "History",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1063,
+        "title": "DairyLane",
+        "imageName": "dairy-lane",
+        "address": "839 South Harris St Sandersville, GA 31082",
+        "hours": {
+            "monHours": "6:30am – 11:00pm",
+            "tuesHours": "6:30am – 11:00pm",
+            "wedHours": "6:30am – 11:00pm",
+            "thursHours": "6:30am – 11:00pm",
+            "friHours": "6:30am – 11:00pm",
+            "satHours": "6:30am – 11:00pm",
+            "sunHours": "6:30am – 11:00pm",
+        },
+        "summary": "",
+        "description": "After DQ wouldn’t open a location in Sandersville, the Walters family opened Dairy Lane that’s “just a little bit better.” The 1st drive thru in Sandersville, Ga.",
+        "coordinates": {
+          "latitude": 32.9670,
+          "longitude": -82.8088
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1064,
+        "title": "The Tennille Ice Cream Company",
+        "imageName": "tennille-ice-cream",
+        "address": "104 W North Central Ave, Tennille, GA 31089",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "11:00am - 8:00pm",
+            "wedHours": "11:00am - 8:00pm",
+            "thursHours": "11:00am - 8:00pm",
+            "friHours": "11:00am - 9:00pm",
+            "satHours": "11:00am - 9:00pm",
+            "sunHours": "12:00pm - 5:00pm",
+        },
+        "summary": "The Tennille Ice Cream brings the 1950s into the 21st Century.",
+        "description": "The Tennille Ice Cream brings the 1950s into the 21st Century. We feature the only hand-dipped ice cream in the county, along with shakes, sundaes, banana splits and floats. Try one of our diner-style hot dogs or sandwiches, fresh-baked cookies and more.",
+        "coordinates": {
+          "latitude": 32.9374,
+          "longitude": -82.8120
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1065,
+        "title": "Chester Dean’s Buffet & BBQ",
+        "imageName": "chester-bbq",
+        "address": "107 E Haynes St., Sandersville, GA 31082",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "11:00am - 2:00pm",
+            "wedHours": "11:00am - 2:00pm",
+            "thursHours": "11:00am - 2:00pm",
+            "friHours": "11:00am - 2:00pm",
+            "satHours": "Closed",
+            "sunHours": "11:00am - 2:00pm",
+        },
+        "summary": "Buffet consisting of delicious southern cooked meats, vegetables, casseroles, salads & desserts.",
+        "description": "Buffet consisting of delicious southern cooked meats, vegetables, casseroles, salads & desserts (price range $0-10). We cater luncheons, church suppers, birthday parties, business meetings, rehearsal dinners, and wedding receptions.",
+        "coordinates": {
+          "latitude": 32.983021,
+          "longitude": -82.810441
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1066,
+        "title": "Trackside Pub & Deli",
+        "imageName": "trackside-pub",
+        "address": "102 W North Central Ave Tennille, GA 31089 United States",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "11:00am – 9:00pm",
+            "wedHours": "11:00am – 9:00pm",
+            "thursHours": "11:00am – 9:00pm",
+            "friHours": "11:00am – 11:00pm",
+            "satHours": "11:00am – 11:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "Trackside offers the best in delicious soups, fresh salads and sandwiches, and the hand-tossed, made to order brick oven pizza.",
+        "description": "Trackside offers the best in delicious soups, fresh salads and sandwiches, and the hand-tossed, made to order brick oven pizza. We also offer the best selection of beer and wine in Washington County to complete the experience.",
+        "coordinates": {
+          "latitude": 32.9374,
+          "longitude": -82.8120
+        },
+        "category": "Dining",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1067,
+        "title": "Hamburg State Park",
+        "imageName": "hamburg-state",
+        "address": "6071 Hamburg State Park Road Mitchell, GA 30820",
+        "hours": {
+            "monHours": "7:00am – 10:00pm",
+            "tuesHours": "7:00am – 10:00pm",
+            "wedHours": "7:00am – 10:00pm",
+            "thursHours": "7:00am – 10:00pm",
+            "friHours": "7:00am – 10:00pm",
+            "satHours": "7:00am – 10:00pm",
+            "sunHours": "7:00am – 10:00pm",
+        },
+        "summary": "3.5 miles of hiking trails & historical landmarks.",
+        "description": "3.5 miles of hiking trails & historical landmarks throughout wide variety of outdoor activities to explore forests and rivers.",
+        "coordinates": {
+          "latitude": 33.206966,
+          "longitude": -82.778400
+        },
+        "category": "Nature",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    },
+    
+    {
+        "id": 1067,
+        "title": "Downtown Sandersville",
+        "imageName": "downtown-sandersville",
+        "address": "141 W. Haynes St Sandersville, GA 31082",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "Refurbished shops and biweekly farmers markets with a southern flare",
+        "description": "Refurbished shops and biweekly farmers markets with a southern flare. Fresh, local, & fun shopping.",
+        "coordinates": {
+          "latitude": 32.9836,
+          "longitude": -82.8125
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1068,
+        "title": "The UGA Barn",
+        "imageName": "uga-barn",
+        "address": "4745-4799 GA-15, Tennille, GA 31089",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "A barn with a UGA mural painted on the side.",
+        "description": "A barn with a UGA mural painted on the side. Famous among UGA fans who come from all over to take a picture next to it.",
+        "coordinates": {
+          "latitude": 32.8764,
+          "longitude": -82.7808
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1069,
+        "title": "Disc Golf Depot",
+        "imageName": "disc-golf-depot",
+        "address": "800 Linton Road Sandersville, GA 31082 United States",
+        "hours": {
+            "monHours": "",
+            "tuesHours": "",
+            "wedHours": "",
+            "thursHours": "",
+            "friHours": "",
+            "satHours": "",
+            "sunHours": "",
+        },
+        "summary": "A professional disc golf course.",
+        "description": "A professional disc golf course. A newer tradition to add to the county’s abundance of older historical traditions.",
+        "coordinates": {
+          "latitude": 32.999353887715,
+          "longitude": -82.814048647875
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": false
+    },
+    
+    {
+        "id": 1070,
+        "title": "Fall Line Artist Guild",
+        "imageName": "fall-line-artist",
+        "address": "118 Malone St. Sandersville GA 31082",
+        "hours": {
+            "monHours": "Closed",
+            "tuesHours": "Closed",
+            "wedHours": "Closed",
+            "thursHours": "6:00pm - 8:00pm",
+            "friHours": "1:00pm - 5:00pm",
+            "satHours": "10:00am - 1:00pm",
+            "sunHours": "Closed",
+        },
+        "summary": "The Fall Line Artist Guild provides the art lover an atmosphere conductive to artistic expression!",
+        "description": "The Fall Line Artist Guild provides the art lover an atmosphere conductive to artistic expression! Washington County has an active and creative art community who display their artistic expressions through photography, pen and ink, painting, pottery, pencil drawing, digital art, fiber arts, woodworking and other arts. Locals and visitors alike are enhanced by viewing the quality of artistic talent that is viewed. The gallery schedules events and programs throughout the year. Artist show and market their art work through out  the year.",
+        "coordinates": {
+          "latitude": 32.9847,
+          "longitude": -82.8115
+        },
+        "category": "Attraction",
+        "favorite": false,
+        "isShowing": false,
+        "hasHours": true
+    }
     
 ]
 
