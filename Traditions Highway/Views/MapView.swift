@@ -32,6 +32,16 @@ class Coordinator: NSObject, MKMapViewDelegate {
         
     }
     
+//    func mapView(_ mapView: MKMapView, viewFor
+//         annotation: MKAnnotation) -> MKAnnotationView?{
+//       //Custom View for Annotation
+//        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
+//        annotationView.canShowCallout = true
+//        //Your custom image icon
+//        annotationView.image = UIImage(named: "locationPin")
+//        return annotationView
+//     }
+//
 }
 
 

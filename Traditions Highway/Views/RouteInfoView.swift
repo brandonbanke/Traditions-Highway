@@ -10,10 +10,15 @@ import SwiftUI
 struct RouteInfoView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showAlert = false
+    @State var filteringListHistory = [PointOfInterest]()
+    @State var filteringListNature = [PointOfInterest]()
+    @State var filteringListDining = [PointOfInterest]()
+    @State var filteringListAttraction = [PointOfInterest]()
     
     var route: Route
     
     var body: some View {
+        NavigationView {
         ScrollView {
             VStack(alignment: .leading) {
                 Image(route.image)
@@ -35,9 +40,35 @@ struct RouteInfoView: View {
                     .lineLimit(1000)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(10)
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: MapScreen(filterResults: filteringListHistory+filteringListNature+filteringListDining+filteringListAttraction)) {
+                            startTripButton(color: .black, title: "START TRIP")
+                    }
+                    Spacer()
+                }
             } // VStack
             
-        } // ScrollView
+        } .onAppear(perform: {
+            if (route.title == "DINING") {
+                filteringListHistory = PoiData.filter {
+                    $0.category.rawValue == "Dining"
+                }
+            } else if (route.title == "ATTRACTIONS") {
+                filteringListHistory = PoiData.filter {
+                    $0.category.rawValue == "Attraction"
+                }
+            } else if (route.title == "HISTORY") {
+                filteringListHistory = PoiData.filter {
+                    $0.category.rawValue == "History"
+                }
+            } else if (route.title == "NATURE") {
+                filteringListHistory = PoiData.filter {
+                    $0.category.rawValue == "Nature"
+                }
+            }
+        }) // ScrollView
+        } // NavView
         .overlay(
             
             HStack {
