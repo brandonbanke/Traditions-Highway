@@ -79,6 +79,10 @@ struct HomeView: View {
                         .sheet(item: self.$selectedRoute) { route in
                             RouteInfoView(route: route)
                         }
+                            NavigationLink(destination: AboutView()) {
+                                Image(systemName: "info.circle")
+                                    .font(.system(size: 30))
+                            }
                         }
                         Spacer()
                         Spacer()

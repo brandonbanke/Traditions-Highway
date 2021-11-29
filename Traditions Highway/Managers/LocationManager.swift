@@ -34,7 +34,8 @@ extension CLLocation {
 }
 
 class LocationManager: NSObject, ObservableObject {
-    lazy var storeRegion = makeStoreRegion()
+    lazy var sanfordRegion = makeSanfordRegion()
+    lazy var stegmanRegion = makeStegmanRegion()
     let notificationCenter = UNUserNotificationCenter.current()
     private let geocoder = CLGeocoder()
     private let locationManager = CLLocationManager()
@@ -71,19 +72,6 @@ class LocationManager: NSObject, ObservableObject {
           }
         })
       }
-    
-    private func makeStoreRegion() -> CLCircularRegion {
-      // 2
-      let region = CLCircularRegion(
-        center: CLLocationCoordinate2D(latitude: 33.953034, longitude: -83.366465),
-        radius: 2,
-        identifier: UUID().uuidString)
-      // 3
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-      // 4
-      return region
-    }
 
     
     func validateLocationAuthorizationStatus() {
@@ -100,7 +88,7 @@ class LocationManager: NSObject, ObservableObject {
       case .authorizedWhenInUse, .authorizedAlways:
         // 6
         print("Location Services Authorized")
-        requestNotificationAuthorization()
+        //requestNotificationAuthorization()
 
       default:
         break
@@ -116,20 +104,83 @@ class LocationManager: NSObject, ObservableObject {
           // 4
           print("Auth Request result: \(result)")
           if result {
-            self?.registerNotification()
+            self?.registerNotifications()
           }
         }
     }
     
-    private func registerNotification() {
+    
+    private func registerNotifications() {
+        registerSanfordNotification()
+        registerStegmanNotification()
+    }
+    
+    
+    // MARK: Making geolocations
+    
+    private func makeSanfordRegion() -> CLCircularRegion {
+      // 2
+      let region = CLCircularRegion(
+        center: CLLocationCoordinate2D(latitude: 33.950238, longitude: -83.374380),
+        radius: 2,
+        identifier: UUID().uuidString)
+      // 3
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+      // 4
+      return region
+    }
+    
+    private func registerSanfordNotification() {
       // 2
       let notificationContent = UNMutableNotificationContent()
-      notificationContent.title = "Welcome to Your Location"
-      notificationContent.body = "This is a location based notification!"
+      notificationContent.title = "Welcome to Sanford Stadium"
+      notificationContent.body = "Click to learn more!"
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: storeRegion, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: sanfordRegion, repeats: false)
+
+      // 4
+      let request = UNNotificationRequest(
+        identifier: UUID().uuidString,
+        content: notificationContent,
+        trigger: trigger)
+
+      // 5
+      notificationCenter
+        .add(request) { error in
+          if error != nil {
+            print("Error: \(String(describing: error))")
+          }
+        }
+    }
+    
+    
+    
+    // Stegman
+    private func makeStegmanRegion() -> CLCircularRegion {
+      // 2
+      let region = CLCircularRegion(
+        center: CLLocationCoordinate2D(latitude: 33.943027, longitude: -83.377482),
+        radius: 2,
+        identifier: UUID().uuidString)
+      // 3
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+      // 4
+      return region
+    }
+    
+    private func registerStegmanNotification() {
+      // 2
+      let notificationContent = UNMutableNotificationContent()
+      notificationContent.title = "Welcome to Stegman Stadium"
+      notificationContent.body = "Click to learn more!"
+      notificationContent.sound = .default
+
+      // 3
+      let trigger = UNLocationNotificationTrigger(region: stegmanRegion, repeats: false)
 
       // 4
       let request = UNNotificationRequest(
