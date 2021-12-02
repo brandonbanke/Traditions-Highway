@@ -114,6 +114,7 @@ class LocationManager: NSObject, ObservableObject {
     private let geocoder = CLGeocoder()
     private let locationManager = CLLocationManager()
     let objectWillChange = PassthroughSubject<Void, Never>()
+    var counter = 0;
 
     @Published var status: CLAuthorizationStatus? {
         willSet { objectWillChange.send() }
@@ -162,8 +163,10 @@ class LocationManager: NSObject, ObservableObject {
       case .authorizedWhenInUse, .authorizedAlways:
         // 6
         print("Location Services Authorized")
-        requestNotificationAuthorization()
-
+//          if (counter == 0) {
+//              requestNotificationAuthorization()
+//              counter+=1;
+//          }
       default:
         break
       }
@@ -188,6 +191,78 @@ class LocationManager: NSObject, ObservableObject {
         registerSanfordNotification()
         registerStegmanNotification()
         registerMeyersNotification()
+        
+        register1001Notification()
+        register1002Notification()
+        register1003Notification()
+        register1004Notification()
+        register1005Notification()
+        register1006Notification()
+        register1007Notification()
+        register1008Notification()
+        register1009Notification()
+        register1010Notification()
+        register1011Notification()
+        register1012Notification()
+        register1013Notification()
+        register1014Notification()
+        register1015Notification()
+        register1016Notification()
+        register1017Notification()
+        register1018Notification()
+        register1019Notification()
+        register1020Notification()
+        register1021Notification()
+        register1022Notification()
+        register1023Notification()
+        register1024Notification()
+        register1025Notification()
+        register1026Notification()
+        register1027Notification()
+        register1028Notification()
+        register1029Notification()
+        register1030Notification()
+        register1031Notification()
+        register1032Notification()
+        register1033Notification()
+        register1034Notification()
+        register1035Notification()
+        register1036Notification()
+        register1037Notification()
+        register1038Notification()
+        register1039Notification()
+        register1040Notification()
+        register1041Notification()
+        register1042Notification()
+        register1043Notification()
+        register1044Notification()
+        register1045Notification()
+        register1046Notification()
+        register1047Notification()
+        register1048Notification()
+        register1049Notification()
+        register1050Notification()
+        register1051Notification()
+        register1052Notification()
+        register1053Notification()
+        register1054Notification()
+        register1055Notification()
+        register1056Notification()
+        register1057Notification()
+        register1058Notification()
+        register1059Notification()
+        register1060Notification()
+        register1061Notification()
+        register1062Notification()
+        register1063Notification()
+        register1064Notification()
+        register1065Notification()
+        register1066Notification()
+        register1067Notification()
+        register1068Notification()
+        register1069Notification()
+        register1070Notification()
+        
     }
     
     

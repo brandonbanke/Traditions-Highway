@@ -18,29 +18,6 @@ struct HomeView: View {
     @State private var tapped: Bool = false
     @State var selectedRoute: Route?
     @EnvironmentObject var poi: POI
-    /*
-    private func getNearByLandmarks() {
-            
-            let request = MKLocalSearch.Request()
-            request.naturalLanguageQuery = search
-            
-            let search = MKLocalSearch(request: request)
-            search.start { (response, error) in
-                if let response = response {
-                    
-                    let mapItems = response.mapItems
-                    self.landmarks = mapItems.map {_ in
-                        ForEach(poi.pointsOfInterest) { pointOfInterest in
-                            Landmark(placemark: pointOfInterest.placemarker)
-                        }
-                    }
-                    
-                }
-                
-            }
-            
-        }
-     */
     
     func calculateOffset() -> CGFloat {
             
@@ -60,9 +37,19 @@ struct HomeView: View {
                 ZStack {
                     Color("BackgroundColor").ignoresSafeArea()
                     VStack {
-                        Image("Logo")
-                            .resizable()
-                            .frame(width: 70.0, height: 70.0)
+                        HStack(alignment: .center) {
+                            Spacer()
+                            Image("Logo")
+                                .resizable()
+                                .frame(width: 70.0, height: 70.0)
+                                .padding(.leading, 50.0)
+                            Spacer()
+                            NavigationLink(destination: AboutView()) {
+                                Image(systemName: "info.circle")
+                                    .font(.system(size: 30))
+                                    .padding(.trailing, 20.0)
+                            }
+                        }
                         NavigationLink(destination: FilterView()) {
                             startTripButton(color: .black, title: "CUSTOMIZE MY TRIP")
                         }
@@ -79,10 +66,7 @@ struct HomeView: View {
                         .sheet(item: self.$selectedRoute) { route in
                             RouteInfoView(route: route)
                         }
-                            NavigationLink(destination: AboutView()) {
-                                Image(systemName: "info.circle")
-                                    .font(.system(size: 30))
-                            }
+                            
                         }
                         Spacer()
                         Spacer()
