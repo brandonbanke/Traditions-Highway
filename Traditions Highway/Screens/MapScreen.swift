@@ -62,22 +62,32 @@ struct MapScreen: View {
             return UIScreen.main.bounds.size.height
         }
     }
-    
+    @State private var showingSheet = false
     var body: some View {
         ZStack(alignment: .top) {
             
-            //MapView(landmarks: PoiData)
+            
             MapView(landmarks: filterResults)
                 .ignoresSafeArea()
                 .onAppear(perform: {
                     loadLocations()
                 })
-            /*
-            PlaceListView(landmarks: self.landmarks) {
-                self.tapped.toggle()
-            }.animation(.spring())
-                .offset(y: calculateOffset())
-            */
+            HStack {
+                Button(action: {
+                    showingSheet.toggle()
+                }, label: {
+                    Image(systemName: "list.bullet")
+                        .font(.system(size: 40))
+                        .padding()
+                })
+                .sheet(isPresented: $showingSheet) {
+                    PlaceListView(filterResults: filterResults)
+                }
+                Spacer()
+                Spacer()
+            }
+
+            
         }
     }
 }
@@ -87,3 +97,18 @@ struct MapScreen_Previews: PreviewProvider {
         MapScreen(filterResults: PoiData)
     }
 }
+
+@available(iOS 15.0, *)
+struct SheetView: View {
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        Button("Press to dismiss") {
+            dismiss()
+        }
+        .font(.title)
+        .padding()
+        .background(Color.black)
+    }
+}
+

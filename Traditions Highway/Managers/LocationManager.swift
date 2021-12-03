@@ -37,6 +37,8 @@ class LocationManager: NSObject, ObservableObject {
     lazy var sanfordRegion = makeSanfordRegion()
     lazy var stegmanRegion = makeStegmanRegion()
     lazy var meyersRegion = makeMeyersRegion()
+    lazy var flatsRegion = makeFlatsRegion()
+    
     
     // MARK: initilizing region variables
     lazy var region1001 = make1001Region()
@@ -191,6 +193,7 @@ class LocationManager: NSObject, ObservableObject {
         registerSanfordNotification()
         registerStegmanNotification()
         registerMeyersNotification()
+        registerFlatsNotification()
         
         register1001Notification()
         register1002Notification()
@@ -268,11 +271,50 @@ class LocationManager: NSObject, ObservableObject {
     
     // MARK: Testing geolocations
     
+    private func makeFlatsRegion() -> CLCircularRegion {
+      // 2
+      let region = CLCircularRegion(
+        center: CLLocationCoordinate2D(latitude: 33.953019, longitude: -83.366432),
+        radius: 3,
+        identifier: UUID().uuidString)
+      // 3
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+      // 4
+      return region
+    }
+    
+    private func registerFlatsNotification() {
+      // 2
+      let notificationContent = UNMutableNotificationContent()
+      notificationContent.title = "Welcome to Elder Mill Covered Bridge!"
+      notificationContent.body = "Click to learn more!"
+      notificationContent.sound = .default
+
+      // 3
+      let trigger = UNLocationNotificationTrigger(region: flatsRegion, repeats: false)
+
+      // 4
+      let request = UNNotificationRequest(
+        identifier: UUID().uuidString,
+        content: notificationContent,
+        trigger: trigger)
+
+      // 5
+      notificationCenter
+        .add(request) { error in
+          if error != nil {
+            print("Error: \(String(describing: error))")
+          }
+        }
+    }
+    
+    
     private func makeSanfordRegion() -> CLCircularRegion {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.950238, longitude: -83.374380),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -313,7 +355,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.943027, longitude: -83.377482),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -352,7 +394,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.946329, longitude: -83.376252),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -396,7 +438,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.7828, longitude: -82.3500),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -434,7 +476,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.723753, longitude: -82.196928),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -472,7 +514,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.785000, longitude: -82.349856),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -510,7 +552,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.776659, longitude: -82.351271),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -548,7 +590,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.785068, longitude: -82.362571),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -586,7 +628,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.766217, longitude: -82.353781),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -624,7 +666,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.939926, longitude: -82.378293),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -662,7 +704,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.9107128, longitude: -82.3106979),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -700,7 +742,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.421320, longitude: -81.612378),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -738,7 +780,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.8323, longitude: -82.0087),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -776,7 +818,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.7417, longitude: -82.1171),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -814,7 +856,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.8293, longitude: -82.0254),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -852,7 +894,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.7420, longitude: -82.1167),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -890,7 +932,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.8301, longitude: -82.0102),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -928,7 +970,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.568512, longitude: -83.177729),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -966,7 +1008,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.587199, longitude: -83.168386),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1004,7 +1046,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575872, longitude: -83.187904),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1042,7 +1084,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.422872, longitude: -83.210405),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1080,7 +1122,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.179291, longitude: -83.077120),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1118,7 +1160,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.577768, longitude: -83.184291),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1156,7 +1198,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575819, longitude: -83.183905),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1194,7 +1236,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.056348, longitude: -82.271735),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1232,7 +1274,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.795173, longitude: -83.416498),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1270,7 +1312,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.450943, longitude: -83.234752),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1308,7 +1350,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.521987, longitude: -83.269065),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1346,7 +1388,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.672686, longitude: -83.265047),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1384,7 +1426,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.577911, longitude: -83.185957),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1422,7 +1464,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.425753, longitude: -83.221095),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1460,7 +1502,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575767, longitude: -83.182806),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1498,7 +1540,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.572646, longitude: -83.182439),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1536,7 +1578,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575722, longitude: -83.182460),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1574,7 +1616,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.278641, longitude: -82.964455),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1612,7 +1654,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.728381, longitude: -82.716292),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1650,7 +1692,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.729531, longitude: -82.714608),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1688,7 +1730,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.730549, longitude: -82.717856),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1726,7 +1768,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.949593, longitude: -83.369601),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1764,7 +1806,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.863927, longitude: -83.409357),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1802,7 +1844,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.802994, longitude: -83.363710),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1840,7 +1882,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.861493, longitude: -83.407451),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1878,7 +1920,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.081029, longitude: -83.221531),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1916,7 +1958,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude:  33.345351, longitude: -83.161673),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1954,7 +1996,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.760953, longitude: -83.443737),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1992,7 +2034,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.864373, longitude: -83.405792),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2030,7 +2072,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.081649, longitude: -83.227494),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2068,7 +2110,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.790449, longitude: -83.465040),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2106,7 +2148,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.880496, longitude: -83.547098),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2144,7 +2186,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.219472, longitude: -82.412525),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2182,7 +2224,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.211960, longitude: -82.394434),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2220,7 +2262,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.214980, longitude: -82.409691),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2258,7 +2300,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.217612, longitude: -82.412874),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2296,7 +2338,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.204141, longitude: -82.370052),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2334,7 +2376,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.211568, longitude: -82.415372),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2372,7 +2414,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3818, longitude: -82.5895),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2410,7 +2452,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3793, longitude: -82.5920),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2448,7 +2490,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3185, longitude: -82.5599),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2486,7 +2528,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.9048, longitude: -82.5738),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2524,7 +2566,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.4764, longitude: -82.4475),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2562,7 +2604,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.377234, longitude: -82.591909),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2600,7 +2642,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3799, longitude: -82.5946),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2638,7 +2680,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9884, longitude: -82.8100),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2676,7 +2718,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.1001, longitude: -82.8051),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2714,7 +2756,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9670, longitude: -82.8088),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2752,7 +2794,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9374, longitude: -82.8120),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2790,7 +2832,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.983021, longitude: -82.810441),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2828,7 +2870,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9374, longitude: -82.8120),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2866,7 +2908,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.206966, longitude: -82.778400),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2904,7 +2946,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9836, longitude: -82.8125),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2942,7 +2984,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.8764, longitude: -82.7808),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2980,7 +3022,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.999353887715, longitude: -82.814048647875),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -3018,7 +3060,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9847, longitude: -82.8115),
-        radius: 2,
+        radius: 3,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
