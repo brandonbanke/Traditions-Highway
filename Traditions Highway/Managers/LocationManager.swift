@@ -162,11 +162,11 @@ class LocationManager: NSObject, ObservableObject {
       // 5
       case .authorizedWhenInUse, .authorizedAlways:
         // 6
-        print("Location Services Authorized")
-//          if (counter == 0) {
-//              requestNotificationAuthorization()
-//              counter+=1;
-//          }
+          if (counter == 0) {
+              print("Location Services Authorized")
+              requestNotificationAuthorization()
+              counter+=1;
+          }
       default:
         break
       }
