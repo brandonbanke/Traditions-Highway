@@ -18,7 +18,6 @@ struct FilterView: View {
     @State var filteringListDining = [PointOfInterest]()
     @State var filteringListAttraction = [PointOfInterest]()
     var body: some View {
-        NavigationView {
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea()
                 VStack {
@@ -131,7 +130,7 @@ struct FilterView: View {
                     Spacer()
                 } // VStack
             } // ZStack
-        } // NavigationView
+         // NavigationView
     }
 }
 
