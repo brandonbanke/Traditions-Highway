@@ -34,12 +34,6 @@ extension CLLocation {
 }
 
 class LocationManager: NSObject, ObservableObject {
-    lazy var sanfordRegion = makeSanfordRegion()
-    lazy var stegmanRegion = makeStegmanRegion()
-    lazy var meyersRegion = makeMeyersRegion()
-    lazy var flatsRegion = makeFlatsRegion()
-    
-    
     // MARK: initilizing region variables
     lazy var region1001 = make1001Region()
     lazy var region1002 = make1002Region()
@@ -167,7 +161,7 @@ class LocationManager: NSObject, ObservableObject {
           if (counter == 0) {
               print("Location Services Authorized")
               requestNotificationAuthorization()
-              counter+=1;
+              counter+=1
           }
       default:
         break
@@ -190,11 +184,6 @@ class LocationManager: NSObject, ObservableObject {
     
     
     private func registerNotifications() {
-        registerSanfordNotification()
-        registerStegmanNotification()
-        registerMeyersNotification()
-        registerFlatsNotification()
-        
         register1001Notification()
         register1002Notification()
         register1003Notification()
@@ -269,167 +258,6 @@ class LocationManager: NSObject, ObservableObject {
     }
     
     
-    // MARK: Testing geolocations
-    
-    private func makeFlatsRegion() -> CLCircularRegion {
-      // 2
-      let region = CLCircularRegion(
-        center: CLLocationCoordinate2D(latitude: 33.953019, longitude: -83.366432),
-        radius: 3,
-        identifier: UUID().uuidString)
-      // 3
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-      // 4
-      return region
-    }
-    
-    private func registerFlatsNotification() {
-      // 2
-      let notificationContent = UNMutableNotificationContent()
-      notificationContent.title = "Welcome to Elder Mill Covered Bridge!"
-      notificationContent.body = "Click to learn more!"
-      notificationContent.sound = .default
-
-      // 3
-      let trigger = UNLocationNotificationTrigger(region: flatsRegion, repeats: false)
-
-      // 4
-      let request = UNNotificationRequest(
-        identifier: UUID().uuidString,
-        content: notificationContent,
-        trigger: trigger)
-
-      // 5
-      notificationCenter
-        .add(request) { error in
-          if error != nil {
-            print("Error: \(String(describing: error))")
-          }
-        }
-    }
-    
-    
-    private func makeSanfordRegion() -> CLCircularRegion {
-      // 2
-      let region = CLCircularRegion(
-        center: CLLocationCoordinate2D(latitude: 33.950238, longitude: -83.374380),
-        radius: 3,
-        identifier: UUID().uuidString)
-      // 3
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-      // 4
-      return region
-    }
-    
-    private func registerSanfordNotification() {
-      // 2
-      let notificationContent = UNMutableNotificationContent()
-      notificationContent.title = "Welcome to Sanford Stadium"
-      notificationContent.body = "Click to learn more!"
-      notificationContent.sound = .default
-
-      // 3
-      let trigger = UNLocationNotificationTrigger(region: sanfordRegion, repeats: false)
-
-      // 4
-      let request = UNNotificationRequest(
-        identifier: UUID().uuidString,
-        content: notificationContent,
-        trigger: trigger)
-
-      // 5
-      notificationCenter
-        .add(request) { error in
-          if error != nil {
-            print("Error: \(String(describing: error))")
-          }
-        }
-    }
-    
-    
-    
-    // Stegman
-    private func makeStegmanRegion() -> CLCircularRegion {
-      // 2
-      let region = CLCircularRegion(
-        center: CLLocationCoordinate2D(latitude: 33.943027, longitude: -83.377482),
-        radius: 3,
-        identifier: UUID().uuidString)
-      // 3
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-      // 4
-      return region
-    }
-    
-    private func registerStegmanNotification() {
-      // 2
-      let notificationContent = UNMutableNotificationContent()
-      notificationContent.title = "Welcome to Stegman Stadium"
-      notificationContent.body = "Click to learn more!"
-      notificationContent.sound = .default
-
-      // 3
-      let trigger = UNLocationNotificationTrigger(region: stegmanRegion, repeats: false)
-
-      // 4
-      let request = UNNotificationRequest(
-        identifier: UUID().uuidString,
-        content: notificationContent,
-        trigger: trigger)
-
-      // 5
-      notificationCenter
-        .add(request) { error in
-          if error != nil {
-            print("Error: \(String(describing: error))")
-          }
-        }
-    }
-    
-    // Meyer
-    private func makeMeyersRegion() -> CLCircularRegion {
-      // 2
-      let region = CLCircularRegion(
-        center: CLLocationCoordinate2D(latitude: 33.946329, longitude: -83.376252),
-        radius: 3,
-        identifier: UUID().uuidString)
-      // 3
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-      // 4
-      return region
-    }
-    
-    private func registerMeyersNotification() {
-      // 2
-      let notificationContent = UNMutableNotificationContent()
-      notificationContent.title = "Welcome to Meyers Quad"
-      notificationContent.body = "Click to learn more!"
-      notificationContent.sound = .default
-
-      // 3
-      let trigger = UNLocationNotificationTrigger(region: meyersRegion, repeats: false)
-
-      // 4
-      let request = UNNotificationRequest(
-        identifier: UUID().uuidString,
-        content: notificationContent,
-        trigger: trigger)
-
-      // 5
-      notificationCenter
-        .add(request) { error in
-          if error != nil {
-            print("Error: \(String(describing: error))")
-          }
-        }
-    }
-    
-    
-    
     
     // MARK: Geolocation region creation
     
@@ -438,7 +266,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.7828, longitude: -82.3500),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -455,7 +283,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1001, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1001, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -476,7 +304,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.723753, longitude: -82.196928),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -493,7 +321,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1002, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1002, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -514,7 +342,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.785000, longitude: -82.349856),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -531,7 +359,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1003, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1003, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -552,7 +380,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.776659, longitude: -82.351271),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -569,7 +397,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1004, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1004, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -590,7 +418,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.785068, longitude: -82.362571),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -607,7 +435,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1005, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1005, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -628,7 +456,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.766217, longitude: -82.353781),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -645,7 +473,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1006, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1006, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -666,7 +494,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.939926, longitude: -82.378293),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -683,7 +511,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1007, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1007, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -704,7 +532,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.9107128, longitude: -82.3106979),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -721,7 +549,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1008, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1008, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -742,7 +570,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.421320, longitude: -81.612378),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -759,7 +587,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1009, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1009, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -780,7 +608,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.8323, longitude: -82.0087),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -797,7 +625,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1010, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1010, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -818,7 +646,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.7417, longitude: -82.1171),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -835,7 +663,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1011, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1011, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -856,7 +684,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.8293, longitude: -82.0254),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -873,7 +701,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1012, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1012, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -894,7 +722,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.7420, longitude: -82.1167),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -911,7 +739,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1013, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1013, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -932,7 +760,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 30.8301, longitude: -82.0102),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -949,7 +777,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1014, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1014, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -970,7 +798,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.568512, longitude: -83.177729),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -987,7 +815,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1015, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1015, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1008,7 +836,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.587199, longitude: -83.168386),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1025,7 +853,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1016, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1016, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1046,7 +874,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575872, longitude: -83.187904),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1063,7 +891,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1017, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1017, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1084,7 +912,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.422872, longitude: -83.210405),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1101,7 +929,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1018, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1018, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1122,7 +950,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.179291, longitude: -83.077120),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1139,7 +967,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1019, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1019, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1160,7 +988,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.577768, longitude: -83.184291),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1177,7 +1005,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1020, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1020, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1198,7 +1026,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575819, longitude: -83.183905),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1215,7 +1043,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1021, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1021, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1236,7 +1064,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.056348, longitude: -82.271735),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1253,7 +1081,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1022, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1022, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1274,7 +1102,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.795173, longitude: -83.416498),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1291,7 +1119,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1023, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1023, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1312,7 +1140,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.450943, longitude: -83.234752),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1329,7 +1157,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1024, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1024, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1350,7 +1178,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.521987, longitude: -83.269065),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1367,7 +1195,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1025, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1025, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1388,7 +1216,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.672686, longitude: -83.265047),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1405,7 +1233,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1026, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1026, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1426,7 +1254,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.577911, longitude: -83.185957),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1443,7 +1271,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1027, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1027, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1464,7 +1292,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.425753, longitude: -83.221095),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1481,7 +1309,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1028, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1028, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1502,7 +1330,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575767, longitude: -83.182806),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1519,7 +1347,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1029, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1029, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1540,7 +1368,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.572646, longitude: -83.182439),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1557,7 +1385,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1030, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1030, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1578,7 +1406,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.575722, longitude: -83.182460),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1595,7 +1423,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1031, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1031, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1616,7 +1444,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.278641, longitude: -82.964455),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1633,7 +1461,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1032, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1032, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1654,7 +1482,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.728381, longitude: -82.716292),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1671,7 +1499,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1033, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1033, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1692,7 +1520,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.729531, longitude: -82.714608),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1709,7 +1537,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1034, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1034, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1730,7 +1558,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.730549, longitude: -82.717856),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1747,7 +1575,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1035, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1035, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1768,7 +1596,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.949593, longitude: -83.369601),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1785,7 +1613,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1036, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1036, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1806,7 +1634,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.863927, longitude: -83.409357),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1823,7 +1651,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1037, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1037, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1844,7 +1672,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.802994, longitude: -83.363710),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1861,7 +1689,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1038, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1038, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1882,7 +1710,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.861493, longitude: -83.407451),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1899,7 +1727,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1039, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1039, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1920,7 +1748,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.081029, longitude: -83.221531),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1937,7 +1765,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1040, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1040, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1958,7 +1786,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude:  33.345351, longitude: -83.161673),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -1975,7 +1803,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1041, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1041, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -1996,7 +1824,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.760953, longitude: -83.443737),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2013,7 +1841,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1042, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1042, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2034,7 +1862,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.864373, longitude: -83.405792),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2051,7 +1879,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1043, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1043, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2072,7 +1900,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.081649, longitude: -83.227494),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2089,7 +1917,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1044, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1044, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2110,7 +1938,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.790449, longitude: -83.465040),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2127,7 +1955,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1045, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1045, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2148,7 +1976,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.880496, longitude: -83.547098),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2165,7 +1993,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1046, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1046, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2186,7 +2014,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.219472, longitude: -82.412525),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2203,7 +2031,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1047, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1047, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2224,7 +2052,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.211960, longitude: -82.394434),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2241,7 +2069,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1048, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1048, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2262,7 +2090,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.214980, longitude: -82.409691),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2279,7 +2107,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1049, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1049, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2300,7 +2128,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.217612, longitude: -82.412874),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2317,7 +2145,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1050, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1050, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2338,7 +2166,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.204141, longitude: -82.370052),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2355,7 +2183,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1051, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1051, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2376,7 +2204,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.211568, longitude: -82.415372),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2393,7 +2221,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1052, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1052, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2414,7 +2242,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3818, longitude: -82.5895),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2431,7 +2259,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1053, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1053, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2452,7 +2280,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3793, longitude: -82.5920),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2469,7 +2297,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1054, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1054, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2490,7 +2318,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3185, longitude: -82.5599),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2507,7 +2335,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1055, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1055, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2528,7 +2356,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 31.9048, longitude: -82.5738),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2545,7 +2373,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1056, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1056, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2566,7 +2394,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.4764, longitude: -82.4475),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2583,7 +2411,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1057, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1057, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2604,7 +2432,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.377234, longitude: -82.591909),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2621,7 +2449,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1058, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1058, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2642,7 +2470,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.3799, longitude: -82.5946),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2659,7 +2487,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1059, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1059, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2680,7 +2508,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9884, longitude: -82.8100),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2697,7 +2525,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1060, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1060, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2718,7 +2546,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.1001, longitude: -82.8051),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2735,7 +2563,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1061, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1061, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2756,7 +2584,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9670, longitude: -82.8088),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2773,7 +2601,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1062, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1062, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2794,7 +2622,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9374, longitude: -82.8120),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2811,7 +2639,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1063, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1063, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2832,7 +2660,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.983021, longitude: -82.810441),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2849,7 +2677,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1064, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1064, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2870,7 +2698,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9374, longitude: -82.8120),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2887,7 +2715,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1065, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1065, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2908,7 +2736,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 33.206966, longitude: -82.778400),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2925,7 +2753,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1066, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1066, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2946,7 +2774,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9836, longitude: -82.8125),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -2963,7 +2791,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1067, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1067, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -2984,7 +2812,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.8764, longitude: -82.7808),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -3001,7 +2829,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1068, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1068, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -3022,7 +2850,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.999353887715, longitude: -82.814048647875),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -3039,7 +2867,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1069, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1069, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
@@ -3060,7 +2888,7 @@ class LocationManager: NSObject, ObservableObject {
       // 2
       let region = CLCircularRegion(
         center: CLLocationCoordinate2D(latitude: 32.9847, longitude: -82.8115),
-        radius: 3,
+        radius: 4,
         identifier: UUID().uuidString)
       // 3
         region.notifyOnEntry = true
@@ -3077,7 +2905,7 @@ class LocationManager: NSObject, ObservableObject {
       notificationContent.sound = .default
 
       // 3
-      let trigger = UNLocationNotificationTrigger(region: region1070, repeats: false)
+      let trigger = UNLocationNotificationTrigger(region: region1070, repeats: true)
 
       // 4
       let request = UNNotificationRequest(
