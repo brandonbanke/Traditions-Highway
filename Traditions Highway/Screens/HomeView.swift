@@ -18,18 +18,6 @@ struct HomeView: View {
     @State private var tapped: Bool = false
     @State var selectedRoute: Route?
     @EnvironmentObject var poi: POI
-    
-    func calculateOffset() -> CGFloat {
-            
-            if self.landmarks.count > 0 && !self.tapped {
-                return UIScreen.main.bounds.size.height - UIScreen.main.bounds.size.height / 4
-            }
-            else if self.tapped {
-                return 100
-            } else {
-                return UIScreen.main.bounds.size.height
-            }
-        }
 
     var body: some View {
         VStack {

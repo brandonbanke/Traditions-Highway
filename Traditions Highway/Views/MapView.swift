@@ -31,17 +31,6 @@ class Coordinator: NSObject, MKMapViewDelegate {
         }
         
     }
-    
-//    func mapView(_ mapView: MKMapView, viewFor
-//         annotation: MKAnnotation) -> MKAnnotationView?{
-//       //Custom View for Annotation
-//        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
-//        annotationView.canShowCallout = true
-//        //Your custom image icon
-//        annotationView.image = UIImage(named: "locationPin")
-//        return annotationView
-//     }
-//
 }
 
 
@@ -87,21 +76,3 @@ struct MapView: UIViewRepresentable {
     }
     
 }
-
-/*
-func addLocations(from mapView: MKMapView) {
-    @EnvironmentObject var poi: POI
-    //let annotations = self.landmarks.map(LandmarkAnnotation.init)
-    let annotationAr = [MKPointAnnotation]()
-    ForEach(poi.pointsOfInterest) { pointOfInterest in
-        let temp = MKPointAnnotation()
-        temp.coordinate = CLLocationCoordinate2D(latitude: pointOfInterest.coordinates.latitude, longitude: pointOfInterest.coordinates.longitude)
-        temp.title = pointOfInterest.title
-        mapView.addAnnotation(temp)
- let tempVar = MKPointAnnotation()
- tempVar.coordinate = CLLocationCoordinate2D(latitude: 33.802994, longitude: -83.363710)
- tempVar.title = "Elder Bridge"
- mapView.addAnnotation(tempVar)
-    }
-}
-*/
